@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cream-light: #FAF6F0;
+    --color-cream-dark: #F3ECE0;
+    --color-gold: #D4AF37;
+    --color-gold-hover: #C5A059;
+    --color-gold-light: #F7E7C4;
+    --color-royal-red: #5C1D24;
+    --color-royal-red-hover: #4A141A;
+    --color-charcoal: #2A211D;
+  }
+  body {
+    padding: 6px;
+    box-sizing: border-box;
+  }
+  @media (min-width: 768px) {
+    body {
+      padding: 12px;
+    }
+  }
+}
+
+/* Custom Fonts Classes */
+.font-cinzel-dec {
+  font-family: 'Cinzel Decorative', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-rozha {
+  font-family: 'Rozha One', serif;
+}
+
+.font-sans {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-royal-red);
+}
+
+/* Palace Arch SVG Overlay Effects */
+.palace-arch-bg {
+  position: relative;
+}
+.palace-arch-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at top, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glassmorphism Styles */
+.royal-glass {
+  background: rgba(250, 246, 240, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(92, 29, 36, 0.05);
+}
+
+.royal-glass-dark {
+  background: rgba(92, 29, 36, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Gold border glow */
+.gold-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+.gold-glow-hover:hover {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.45);
+}
+
+/* Cinematic Curtain Styling */
+.curtain-container {
+  perspective: 1000px;
+}
+
+.curtain-panel {
+  transform-style: preserve-3d;
+  transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Animated Strings */
+@keyframes sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.string-puppet {
+  transform-origin: top center;
+  animation: sway 4s ease-in-out infinite;
+}
+
+/* Remove default reset styling that clashes with the app */
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border-inline: none;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Shimmer animation for loading states */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.animate-shimmer {
+  animation: shimmer 1.5s infinite;
+}
+
+/* Repeating gold-crimson Rajasthani motif bordering around the entire viewport */
+.royal-site-frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 6px solid transparent;
+  border-image: repeating-linear-gradient(
+    45deg,
+    #D4AF37,
+    #D4AF37 6px,
+    #5C1D24 6px,
+    #5C1D24 12px
+  ) 6;
+  pointer-events: none;
+  z-index: 9999; /* Always on top */
+  box-shadow: inset 0 0 0 1px #FAF6F0, inset 0 0 8px rgba(92, 29, 36, 0.4);
+}
+
+@media (min-width: 768px) {
+  .royal-site-frame {
+    border: 12px solid transparent;
+    border-image: repeating-linear-gradient(
+      45deg,
+      #D4AF37,
+      #D4AF37 12px,
+      #5C1D24 12px,
+      #5C1D24 24px
+    ) 12;
+    box-shadow: inset 0 0 0 2px #FAF6F0, inset 0 0 15px rgba(92, 29, 36, 0.4);
+  }
+}
+
+/* 4K HD Image Edge & Contrast Sharpening Optimizer */
+.hd-image {
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
+  filter: contrast(1.08) brightness(1.02) saturate(1.04) drop-shadow(0px 1px 3px rgba(0,0,0,0.12)) !important;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-font-smoothing: subpixel-antialiased;
+}
