@@ -14,6 +14,7 @@ interface OwnerDashboardProps {
 }
 
 const PRESET_IMAGES = [
+  { label: 'Jackets: Royal Indigo Nehru', value: '/jacket_1.png' },
   { label: 'Casual: Khaki Drawstring Chinos', value: '/casual_pants_1.png' },
   { label: 'Casual: Olive Green Linen', value: '/casual_pants_2.png' },
   { label: 'Casual: Navy Cotton Joggers', value: '/casual_pants_3.png' },
