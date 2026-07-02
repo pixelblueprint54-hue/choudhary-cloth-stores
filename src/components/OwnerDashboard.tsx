@@ -14,6 +14,11 @@ interface OwnerDashboardProps {
 }
 
 const PRESET_IMAGES = [
+  { label: 'Hoodies: Los Angeles Grey', value: '/hoodie_1.png' },
+  { label: 'Hoodies: Brooklyn Quarter-Zip', value: '/hoodie_2.png' },
+  { label: 'Hoodies: Classic Black Pullover', value: '/hoodie_3.png' },
+  { label: 'Hoodies: Crimson Red Basic', value: '/hoodie_4.png' },
+  { label: 'Hoodies: Contrast Active Zip', value: '/hoodie_5.png' },
   { label: 'Jackets: Black Hooded Puffer', value: '/jacket_2.png' },
   { label: 'Jackets: Active Navy Sports', value: '/jacket_3.png' },
   { label: 'Jackets: Premium Olive Bomber', value: '/jacket_4.png' },

@@ -530,14 +530,63 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "prod-m9",
-    name: "Men's Cozy Fleece Pullover Hoodie",
+    name: "Men's Los Angeles Grey Hoodie",
     category: "Hoodies",
     price: 2499,
     rating: 4.8,
     reviews: 115,
-    description: "Warm and cozy fleece hoodie with a front kangaroo pocket and ribbed cuffs.",
+    description: "Premium grey colorblock pullover hoodie featuring custom Los Angeles lettering and comfortable ribbed cuffs.",
     textureType: "kurta",
-    colorPalette: { primary: "#1E293B", secondary: "#0F172A", accent: "#FAF6F0" }
+    colorPalette: { primary: "#9CA3AF", secondary: "#111111", accent: "#FAF6F0" },
+    imageUrl: "/hoodie_1.png"
+  },
+  {
+    id: "prod-m9-2",
+    name: "Men's Brooklyn High Collar Sweatshirt",
+    category: "Hoodies",
+    price: 2799,
+    rating: 4.9,
+    reviews: 80,
+    description: "Vintage brown high-collar quarter-zip sweatshirt featuring Brooklyn 1898 graphic detailing.",
+    textureType: "kurta",
+    colorPalette: { primary: "#78350F", secondary: "#FAF6F0", accent: "#451A03" },
+    imageUrl: "/hoodie_2.png"
+  },
+  {
+    id: "prod-m9-3",
+    name: "Men's Classic Warm Black Hoodie",
+    category: "Hoodies",
+    price: 2299,
+    rating: 4.7,
+    reviews: 140,
+    description: "Heavyweight black cotton fleece hoodie with adjustable drawstrings and a roomy kangaroo pocket.",
+    textureType: "kurta",
+    colorPalette: { primary: "#111111", secondary: "#374151", accent: "#FAF6F0" },
+    imageUrl: "/hoodie_3.png"
+  },
+  {
+    id: "prod-m9-4",
+    name: "Men's Crimson Red Basic Hoodie",
+    category: "Hoodies",
+    price: 2399,
+    rating: 4.8,
+    reviews: 62,
+    description: "Classic relaxed fit hoodie in vibrant crimson red, crafted from soft brushed cotton blend.",
+    textureType: "kurta",
+    colorPalette: { primary: "#5C1D24", secondary: "#FAF6F0", accent: "#FAF6F0" },
+    imageUrl: "/hoodie_4.png"
+  },
+  {
+    id: "prod-m9-5",
+    name: "Men's Black & Grey Active Hoodie",
+    category: "Hoodies",
+    price: 2599,
+    rating: 4.7,
+    reviews: 50,
+    description: "Sporty zip-up hoodie featuring black and grey contrast panels, perfect for casual layer styling.",
+    textureType: "kurta",
+    colorPalette: { primary: "#111111", secondary: "#9CA3AF", accent: "#FAF6F0" },
+    imageUrl: "/hoodie_5.png"
   },
   {
     id: "prod-m10",
@@ -1061,7 +1110,7 @@ function App() {
   const [products, setProducts] = useState<Product[]>(() => {
     const saved = localStorage.getItem('CCS_PRODUCTS');
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
-    const CATALOG_VERSION = 'v13';
+    const CATALOG_VERSION = 'v14';
     if (saved && savedVer === CATALOG_VERSION) {
       try {
         const parsed = JSON.parse(saved);
