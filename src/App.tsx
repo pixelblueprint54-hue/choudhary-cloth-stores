@@ -1208,7 +1208,7 @@ function App() {
   const [products, setProducts] = useState<Product[]>(() => {
     const saved = localStorage.getItem('CCS_PRODUCTS');
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
-    const CATALOG_VERSION = 'v16';
+    const CATALOG_VERSION = 'v17';
     if (saved && savedVer === CATALOG_VERSION) {
       try {
         const parsed = JSON.parse(saved);
