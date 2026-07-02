@@ -1206,10 +1206,15 @@ function App() {
 
   // Dynamic products state with localStorage persistence
   const [products, setProducts] = useState<Product[]>(() => {
-    const saved = localStorage.getItem('CCS_PRODUCTS');
+    const CATALOG_VERSION = 'v17-20260702';
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
-    const CATALOG_VERSION = 'v17';
-    if (saved && savedVer === CATALOG_VERSION) {
+    // Always reset if version doesn't match — ensures new deploys are always fresh
+    if (savedVer !== CATALOG_VERSION) {
+      localStorage.removeItem('CCS_PRODUCTS');
+      localStorage.removeItem('CCS_CATALOG_VERSION');
+    }
+    const saved = localStorage.getItem('CCS_PRODUCTS');
+    if (saved) {
       try {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
