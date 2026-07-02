@@ -160,7 +160,7 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
         {/* Royal embroidery border on curtain */}
         <div className="absolute top-0 bottom-0 right-4 w-12 border-r-2 border-dashed border-[#D4AF37]/50 opacity-40" />
         <div className="font-cinzel text-xs text-[#D4AF37]/60 tracking-[0.2em] uppercase select-none">Established Since 1994</div>
-        <div className="flex-1 flex items-center justify-center px-4">
+        <div className="flex-1 hidden md:flex items-center justify-center px-4">
           <div className="font-rozha text-4xl md:text-5xl lg:text-6xl text-[#D4AF37] select-none text-center tracking-wide leading-snug drop-shadow-md">
             चौधरी <br />
             क्लॉथ स्टोर्स
@@ -177,7 +177,7 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
       >
         <div className="absolute top-0 bottom-0 left-4 w-12 border-l-2 border-dashed border-[#D4AF37]/50 opacity-40" />
         <div className="font-cinzel text-xs text-[#D4AF37]/60 tracking-[0.2em] uppercase select-none text-right">1 Lakh+ Happy Customers</div>
-        <div className="flex-1 flex items-center justify-center px-4">
+        <div className="flex-1 hidden md:flex items-center justify-center px-4">
           <div className="font-cinzel text-2xl md:text-3xl lg:text-4xl text-[#D4AF37] select-none font-bold tracking-widest drop-shadow-md text-center leading-snug">
             CHOUDHARY <br />
             <span className="text-sm md:text-base lg:text-lg tracking-[0.3em] text-[#FAF6F0]/80">CLOTH STORES</span>
@@ -193,7 +193,10 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
             <div className="w-20 h-20 rounded-full border-2 border-[#D4AF37] flex items-center justify-center bg-[#4A141A] shadow-lg mb-6 text-[#D4AF37] animate-pulse">
               <Sparkles size={36} className="text-[#D4AF37]" />
             </div>
-            <h1 className="font-cinzel text-3xl md:text-4xl text-[#FAF6F0] mb-3 tracking-widest font-bold">
+            <div className="block md:hidden font-cinzel text-sm text-[#D4AF37] tracking-[0.25em] uppercase mb-2 font-semibold">
+              CHOUDHARY CLOTH STORES
+            </div>
+            <h1 className="font-cinzel text-2xl sm:text-3xl md:text-4xl text-[#FAF6F0] mb-3 tracking-widest font-bold">
               WELCOME TO THE PALACE
             </h1>
             <p className="font-sans text-[#F7E7C4] mb-8 text-sm tracking-wider uppercase opacity-80 max-w-sm">
