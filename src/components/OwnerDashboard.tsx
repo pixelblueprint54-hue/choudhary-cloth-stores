@@ -14,6 +14,11 @@ interface OwnerDashboardProps {
 }
 
 const PRESET_IMAGES = [
+  { label: 'Casual: Khaki Drawstring Chinos', value: '/casual_pants_1.png' },
+  { label: 'Casual: Olive Green Linen', value: '/casual_pants_2.png' },
+  { label: 'Casual: Navy Cotton Joggers', value: '/casual_pants_3.png' },
+  { label: 'Casual: Slate Grey Cargo', value: '/casual_pants_4.png' },
+  { label: 'Casual: Cream White Beach Pants', value: '/casual_pants_5.png' },
   { label: 'Formal: Navy Blue Slim Fit', value: '/formal_pants_1.png' },
   { label: 'Formal: Olive Green Tailored', value: '/formal_pants_2.png' },
   { label: 'Formal: Beige Pleated Dress', value: '/formal_pants_3.png' },
