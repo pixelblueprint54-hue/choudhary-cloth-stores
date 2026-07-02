@@ -781,20 +781,20 @@ function App() {
   // Dynamic products state with localStorage persistence
   const [products, setProducts] = useState<Product[]>(() => {
     const saved = localStorage.getItem('CCS_PRODUCTS');
-    if (saved) {
+    const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
+    const CATALOG_VERSION = 'v5';
+    if (saved && savedVer === CATALOG_VERSION) {
       try {
         const parsed = JSON.parse(saved);
-        // Automatically upgrade existing store inventory to include kids collection (with your specific upscaled boys & girls images)
-        const needsUpgrade = !parsed.some((p: any) => p.id === "prod-m1-2") || !parsed.some((p: any) => p.id === "prod-m1") || !parsed.some((p: any) => p.id === "prod-m6" && p.name.includes("Forest")) || parsed.some((p: any) => p.id === "prod-m1" && p.category.includes("Men's Collection")) || parsed.some((p: any) => p.id === "prod-1" || p.name.includes("SRK"));
-        if (Array.isArray(parsed) && parsed.length > 0 && needsUpgrade) {
-          localStorage.setItem('CCS_PRODUCTS', JSON.stringify(PRODUCTS));
-          return PRODUCTS;
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          return parsed;
         }
-        return parsed;
       } catch (e) {
         console.error("Failed to parse local storage products:", e);
       }
     }
+    localStorage.setItem('CCS_PRODUCTS', JSON.stringify(PRODUCTS));
+    localStorage.setItem('CCS_CATALOG_VERSION', CATALOG_VERSION);
     return PRODUCTS;
   });
 
