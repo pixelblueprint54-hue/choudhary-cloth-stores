@@ -710,14 +710,63 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "prod-m12",
-    name: "Men's Athletic Fit Jogger Track Pants",
+    name: "Men's Black Wide-Leg Track Pants",
     category: "Track Pants",
     price: 1599,
     rating: 4.8,
     reviews: 160,
-    description: "Breathable, moisture-wicking track pants with zippered side pockets and an elastic drawstring waist.",
+    description: "Smooth wide-leg black track pants with elastic waistband and side pockets, ultra-comfortable for daily wear.",
     textureType: "bandhgala",
-    colorPalette: { primary: "#1E293B", secondary: "#475569", accent: "#FAF6F0" }
+    colorPalette: { primary: "#111111", secondary: "#374151", accent: "#FAF6F0" },
+    imageUrl: "/trackpants_1.png"
+  },
+  {
+    id: "prod-m12-2",
+    name: "Men's Black Cargo Track Pants",
+    category: "Track Pants",
+    price: 1799,
+    rating: 4.7,
+    reviews: 95,
+    description: "Relaxed-fit black cargo track pants with side utility pockets and a clean tapered silhouette.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#111111", secondary: "#1F2937", accent: "#FAF6F0" },
+    imageUrl: "/trackpants_2.png"
+  },
+  {
+    id: "prod-m12-3",
+    name: "Men's Cream Relaxed Jogger Pants",
+    category: "Track Pants",
+    price: 1699,
+    rating: 4.6,
+    reviews: 72,
+    description: "Premium off-white relaxed jogger pants with a drawstring waist, perfect for lounging and casual styling.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#FAF6F0", secondary: "#E5E7EB", accent: "#9CA3AF" },
+    imageUrl: "/trackpants_3.png"
+  },
+  {
+    id: "prod-m12-4",
+    name: "Men's Grey Striped Sports Track Pants",
+    category: "Track Pants",
+    price: 1499,
+    rating: 4.9,
+    reviews: 188,
+    description: "Classic grey track pants with iconic white side stripes and an elasticated drawstring waist — great for sports.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#6B7280", secondary: "#FAF6F0", accent: "#374151" },
+    imageUrl: "/trackpants_4.png"
+  },
+  {
+    id: "prod-m12-5",
+    name: "Men's Beige Linen Casual Pants",
+    category: "Track Pants",
+    price: 1899,
+    rating: 4.7,
+    reviews: 110,
+    description: "Lightweight beige linen-blend casual pants with a drawstring waist, ideal for warm weather and street wear.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#D4B896", secondary: "#FAF6F0", accent: "#9CA3AF" },
+    imageUrl: "/trackpants_5.png"
   },
   {
     id: "prod-m13",
@@ -1206,7 +1255,7 @@ function App() {
 
   // Dynamic products state with localStorage persistence
   const [products, setProducts] = useState<Product[]>(() => {
-    const CATALOG_VERSION = 'v17-20260702';
+    const CATALOG_VERSION = 'v18-20260702';
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
     // Always reset if version doesn't match — ensures new deploys are always fresh
     if (savedVer !== CATALOG_VERSION) {
