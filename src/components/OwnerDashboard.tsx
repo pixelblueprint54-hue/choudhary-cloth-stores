@@ -14,6 +14,8 @@ interface OwnerDashboardProps {
 }
 
 const PRESET_IMAGES = [
+  { label: 'Pants: Charcoal Formal Trousers', value: '/charcoal_pants.png' },
+  { label: 'Pants: Relaxed Casual Khaki', value: '/relaxed_pants.png' },
   { label: 'Trousers: Khaki Cotton Chinos', value: '/trousers_1.png' },
   { label: 'Trousers: Cream Pleated Formal', value: '/trousers_2.png' },
   { label: 'Trousers: Flat-Front Brown Formal', value: '/trousers_3.png' },

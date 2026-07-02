@@ -237,7 +237,8 @@ const PRODUCTS: Product[] = [
     reviews: 98,
     description: "Slim-fit formal trousers in a sophisticated charcoal grey, perfect for business and office settings.",
     textureType: "bandhgala",
-    colorPalette: { primary: "#374151", secondary: "#1F2937", accent: "#FAF6F0" }
+    colorPalette: { primary: "#374151", secondary: "#1F2937", accent: "#FAF6F0" },
+    imageUrl: "/charcoal_pants.png"
   },
   {
     id: "prod-m4",
@@ -248,7 +249,8 @@ const PRODUCTS: Product[] = [
     reviews: 84,
     description: "Lightweight cotton-linen pants with a relaxed silhouette, ideal for weekend ease.",
     textureType: "bandhgala",
-    colorPalette: { primary: "#4B5563", secondary: "#9CA3AF", accent: "#FAF6F0" }
+    colorPalette: { primary: "#4B5563", secondary: "#9CA3AF", accent: "#FAF6F0" },
+    imageUrl: "/relaxed_pants.png"
   },
   {
     id: "prod-m5",
@@ -831,7 +833,7 @@ function App() {
   const [products, setProducts] = useState<Product[]>(() => {
     const saved = localStorage.getItem('CCS_PRODUCTS');
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
-    const CATALOG_VERSION = 'v6';
+    const CATALOG_VERSION = 'v7';
     if (saved && savedVer === CATALOG_VERSION) {
       try {
         const parsed = JSON.parse(saved);
