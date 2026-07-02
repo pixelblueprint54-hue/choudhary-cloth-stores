@@ -36,6 +36,39 @@ const PRODUCTS: Product[] = [
     colorPalette: { primary: "#1E3A8A", secondary: "#3B82F6", accent: "#FAF6F0" }
   },
   {
+    id: "prod-m1-2",
+    name: "Men's Slim Fit Dark Wash Jeans",
+    category: "Jeans",
+    price: 2499,
+    rating: 4.9,
+    reviews: 182,
+    description: "Modern slim-cut jeans in a deep indigo dark wash, crafted from heavy-duty stretch denim.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#1A2530", secondary: "#2A364F", accent: "#FAF6F0" }
+  },
+  {
+    id: "prod-m1-3",
+    name: "Men's Distressed Vintage Denim Jeans",
+    category: "Jeans",
+    price: 2299,
+    rating: 4.7,
+    reviews: 95,
+    description: "Classic vintage wash blue jeans, featuring subtle distressed highlights and a relaxed straight-leg fit.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#3B82F6", secondary: "#60A5FA", accent: "#FAF6F0" }
+  },
+  {
+    id: "prod-m1-4",
+    name: "Men's Active Athletic Fit Black Jeans",
+    category: "Jeans",
+    price: 2199,
+    rating: 4.8,
+    reviews: 112,
+    description: "Jet black active-fit jeans woven with premium Lycra fibers for maximum flexibility and movement.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#111111", secondary: "#1E293B", accent: "#FAF6F0" }
+  },
+  {
     id: "prod-m2",
     name: "Men's Tailored Chino Trousers",
     category: "Trousers",
@@ -652,7 +685,7 @@ function App() {
       try {
         const parsed = JSON.parse(saved);
         // Automatically upgrade existing store inventory to include kids collection (with your specific upscaled boys & girls images)
-        const needsUpgrade = !parsed.some((p: any) => p.id === "prod-m1") || !parsed.some((p: any) => p.id === "prod-m6" && p.name.includes("Forest")) || parsed.some((p: any) => p.id === "prod-m1" && p.category.includes("Men's Collection")) || parsed.some((p: any) => p.id === "prod-1" || p.name.includes("SRK"));
+        const needsUpgrade = !parsed.some((p: any) => p.id === "prod-m1-2") || !parsed.some((p: any) => p.id === "prod-m1") || !parsed.some((p: any) => p.id === "prod-m6" && p.name.includes("Forest")) || parsed.some((p: any) => p.id === "prod-m1" && p.category.includes("Men's Collection")) || parsed.some((p: any) => p.id === "prod-1" || p.name.includes("SRK"));
         if (Array.isArray(parsed) && parsed.length > 0 && needsUpgrade) {
           localStorage.setItem('CCS_PRODUCTS', JSON.stringify(PRODUCTS));
           return PRODUCTS;
