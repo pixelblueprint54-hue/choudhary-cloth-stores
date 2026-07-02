@@ -469,50 +469,6 @@ const PRODUCTS: Product[] = [
     imageUrl: "/jacket_1.png"
   },
   {
-    id: "prod-m8-2",
-    name: "Men's Classic Tan Suede Bomber",
-    category: "Jackets",
-    price: 5499,
-    rating: 4.8,
-    reviews: 42,
-    description: "Tailored bomber jacket in premium tan suede, featuring ribbed collar and hem details.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#A18262", secondary: "#FAF6F0", accent: "#78350F" }
-  },
-  {
-    id: "prod-m8-3",
-    name: "Men's Heritage Brown Leather Biker",
-    category: "Jackets",
-    price: 7999,
-    rating: 4.9,
-    reviews: 80,
-    description: "Authentic heavy leather biker jacket in rich dark chocolate brown, detailed with silver metal zips.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#451A03", secondary: "#FAF6F0", accent: "#78350F" }
-  },
-  {
-    id: "prod-m8-4",
-    name: "Men's Smart Navy Blazer Jacket",
-    category: "Jackets",
-    price: 4499,
-    rating: 4.7,
-    reviews: 55,
-    description: "Single-breasted unstructured casual blazer jacket in deep navy blue waffle cotton.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#1E3B8A", secondary: "#FAF6F0", accent: "#374151" }
-  },
-  {
-    id: "prod-m8-5",
-    name: "Men's Outdoor Olive Safari Jacket",
-    category: "Jackets",
-    price: 3999,
-    rating: 4.6,
-    reviews: 31,
-    description: "Rugged military-style utility safari jacket in olive drab cotton drill, featuring four front pockets.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#4D7C0F", secondary: "#FAF6F0", accent: "#1E293B" }
-  },
-  {
     id: "prod-m9",
     name: "Men's Cozy Fleece Pullover Hoodie",
     category: "Hoodies",
@@ -1045,7 +1001,7 @@ function App() {
   const [products, setProducts] = useState<Product[]>(() => {
     const saved = localStorage.getItem('CCS_PRODUCTS');
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
-    const CATALOG_VERSION = 'v11';
+    const CATALOG_VERSION = 'v12';
     if (saved && savedVer === CATALOG_VERSION) {
       try {
         const parsed = JSON.parse(saved);
