@@ -842,15 +842,63 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "prod-m15",
-    name: "Men's Traditional Silk Kurta Pajama",
+    name: "Men's Pink Embroidered Kurta",
     category: "Ethnic Wear",
-    price: 4500,
+    price: 2199,
     rating: 4.9,
-    reviews: 198,
-    description: "Classic silk-blend ethnic kurta set with fine embroidery, ideal for festivals and celebrations.",
+    reviews: 145,
+    description: "Elegant soft pink kurta with delicate neck embroidery and three-quarter sleeves — perfect for festive occasions.",
     textureType: "kurta",
-    colorPalette: { primary: "#D4AF37", secondary: "#5C1D24", accent: "#FAF6F0" },
-    imageUrl: "/jaipur_gold_kurta.png"
+    colorPalette: { primary: "#F9A8D4", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/ethnic_1.png"
+  },
+  {
+    id: "prod-m15-2",
+    name: "Men's Navy Blue Pathani Suit Set",
+    category: "Ethnic Wear",
+    price: 3499,
+    rating: 4.8,
+    reviews: 188,
+    description: "Regal navy blue Pathani kurta-salwar suit set with a classic shirt collar and matching bottoms.",
+    textureType: "kurta",
+    colorPalette: { primary: "#1E3A8A", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/ethnic_2.png"
+  },
+  {
+    id: "prod-m15-3",
+    name: "Men's Floral Print Kurta with Dhoti",
+    category: "Ethnic Wear",
+    price: 2799,
+    rating: 4.7,
+    reviews: 96,
+    description: "Vibrant floral block-print kurta paired with a peach dhoti — a bold festive look with traditional flair.",
+    textureType: "kurta",
+    colorPalette: { primary: "#FAF6F0", secondary: "#F472B6", accent: "#0D9488" },
+    imageUrl: "/ethnic_3.png"
+  },
+  {
+    id: "prod-m15-4",
+    name: "Men's Yellow Mandarin Collar Linen Kurta",
+    category: "Ethnic Wear",
+    price: 1899,
+    rating: 4.8,
+    reviews: 120,
+    description: "Bright mustard yellow linen kurta with a mandarin collar and wooden button placket — casual ethnic style.",
+    textureType: "kurta",
+    colorPalette: { primary: "#D97706", secondary: "#FAF6F0", accent: "#92400E" },
+    imageUrl: "/ethnic_4.png"
+  },
+  {
+    id: "prod-m15-5",
+    name: "Men's White Peacock Embroidered Sherwani Kurta",
+    category: "Ethnic Wear",
+    price: 5999,
+    rating: 5.0,
+    reviews: 74,
+    description: "Stunning white sherwani kurta with intricate peacock and floral thread embroidery — ideal for weddings.",
+    textureType: "kurta",
+    colorPalette: { primary: "#FAF6F0", secondary: "#0D9488", accent: "#D4AF37" },
+    imageUrl: "/ethnic_5.png"
   },
   {
     id: "prod-m16",
@@ -1020,18 +1068,7 @@ const PRODUCTS: Product[] = [
     colorPalette: { primary: "#4D7C0F", secondary: "#FAF6F0", accent: "#374151" },
     imageUrl: "/tshirt_6.png"
   },
-  {
-    id: "prod-m20",
-    name: "Men's Traditional Mojari Jootis",
-    category: "Ethnic Wear",
-    price: 1499,
-    rating: 4.9,
-    reviews: 180,
-    description: "Fine handcrafted genuine leather and embroidered Mojari jootis.",
-    textureType: "jooti",
-    colorPalette: { primary: "#78350F", secondary: "#FAF6F0", accent: "#D4AF37" },
-    imageUrl: "/zardozi_jootis.png"
-  },
+
 
   // --- BOYS' COLLECTION (AGE 0-18 YEARS) ---
   {
@@ -1428,7 +1465,7 @@ function App() {
   // Owner-added products from localStorage are merged ON TOP of the base catalog.
   // This ensures all deployed products are always visible regardless of browser cache.
   const [products, setProducts] = useState<Product[]>(() => {
-    const CATALOG_VERSION = 'v20-20260702';
+    const CATALOG_VERSION = 'v21-20260702';
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
     
     // Always clear stale cache on version mismatch
