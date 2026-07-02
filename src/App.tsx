@@ -782,14 +782,63 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "prod-m14",
-    name: "Men's Breathable Boxer Briefs Set",
+    name: "Men's COZI Navy Blue Boxer Brief",
     category: "Innerwear",
-    price: 899,
-    rating: 4.9,
-    reviews: 240,
-    description: "Pack of three organic cotton stretch boxer briefs with flatlock seams for zero chafing.",
+    price: 499,
+    rating: 4.8,
+    reviews: 320,
+    description: "Premium COZI navy blue boxer brief with a comfortable wide waistband and moisture-wicking fabric.",
     textureType: "bandhgala",
-    colorPalette: { primary: "#1E293B", secondary: "#334155", accent: "#FAF6F0" }
+    colorPalette: { primary: "#1E3A8A", secondary: "#FAF6F0", accent: "#DC2626" },
+    imageUrl: "/innerwear_1.png"
+  },
+  {
+    id: "prod-m14-2",
+    name: "Men's Jockey Black Brief",
+    category: "Innerwear",
+    price: 399,
+    rating: 4.9,
+    reviews: 480,
+    description: "Classic Jockey black brief with a silver metallic waistband, crafted from soft combed cotton.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#111111", secondary: "#9CA3AF", accent: "#FAF6F0" },
+    imageUrl: "/innerwear_2.png"
+  },
+  {
+    id: "prod-m14-3",
+    name: "Men's XYXX 4-Pack Boxer Trunks",
+    category: "Innerwear",
+    price: 1299,
+    rating: 4.7,
+    reviews: 210,
+    description: "Value pack of 4 XYXX boxer trunks in assorted colours — black, grey, dark and navy blue.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#111111", secondary: "#6B7280", accent: "#1E3A8A" },
+    imageUrl: "/innerwear_3.png"
+  },
+  {
+    id: "prod-m14-4",
+    name: "Men's DaMENSCH 3-Pack Printed Trunks",
+    category: "Innerwear",
+    price: 1099,
+    rating: 4.8,
+    reviews: 175,
+    description: "DaMENSCH premium 3-pack boxer trunks in vibrant printed and solid designs — ultra-soft micro modal fabric.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#1E3A8A", secondary: "#5C1D24", accent: "#111111" },
+    imageUrl: "/innerwear_4.png"
+  },
+  {
+    id: "prod-m14-5",
+    name: "Men's Levi's 2-Pack Boxer Briefs",
+    category: "Innerwear",
+    price: 799,
+    rating: 4.9,
+    reviews: 290,
+    description: "Levi's classic 2-pack boxer briefs in black and charcoal grey — durable cotton stretch for all-day comfort.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#111111", secondary: "#374151", accent: "#FAF6F0" },
+    imageUrl: "/innerwear_5.png"
   },
   {
     id: "prod-m15",
@@ -1255,7 +1304,7 @@ function App() {
 
   // Dynamic products state with localStorage persistence
   const [products, setProducts] = useState<Product[]>(() => {
-    const CATALOG_VERSION = 'v18-20260702';
+    const CATALOG_VERSION = 'v19-20260702';
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
     // Always reset if version doesn't match — ensures new deploys are always fresh
     if (savedVer !== CATALOG_VERSION) {
