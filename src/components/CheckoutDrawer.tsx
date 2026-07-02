@@ -31,14 +31,6 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
   const [receiptNo, setReceiptNo] = useState('');
   const [receiptDate, setReceiptDate] = useState('');
 
-  const calculateSubtotal = () => {
-    return cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
-  };
-
-  const subtotal = calculateSubtotal();
-  const royalTax = Math.floor(subtotal * 0.05); // 5% royal GST / maintenance
-  const discount = subtotal > 15000 ? Math.floor(subtotal * 0.1) : 0; // 10% discount for orders above 15k
-  const total = subtotal + royalTax - discount;
 
   const handleCheckout = (e: React.FormEvent) => {
     e.preventDefault();
@@ -66,10 +58,6 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
                 `*Address:* ${address || 'Goregaon Store Pick-up'}\n` +
                 `----------------------------------------\n` +
                 `*Items Ordered:*\n${itemsText}\n` +
-                `----------------------------------------\n` +
-                `*Subtotal:* ₹${subtotal.toLocaleString('en-IN')}\n` +
-                `*GST (5%):* ₹${royalTax.toLocaleString('en-IN')}\n` +
-                `*Grand Total:* ₹${total.toLocaleString('en-IN')}\n` +
                 `----------------------------------------\n` +
                 `Please confirm my order booking!`;
                 
@@ -139,11 +127,8 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
                         <h4 className="font-cinzel text-sm font-bold text-[#5C1D24] line-clamp-1">
                           {item.product.name}
                         </h4>
-                        <div className="text-[10px] text-[#2A211D]/50 uppercase tracking-widest font-sans mb-1">
+                        <div className="text-[10px] text-[#2A211D]/50 uppercase tracking-widest font-sans">
                           {item.product.category}
-                        </div>
-                        <div className="font-cinzel text-xs font-semibold text-[#5C1D24]">
-                          ₹{item.product.price.toLocaleString('en-IN')}
                         </div>
                       </div>
 
@@ -181,28 +166,6 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
               {/* Checkout Form & Summary */}
               {cart.length > 0 && (
                 <div className="p-5 border-t border-[#D4AF37]/20 bg-[#F3ECE0]/50 space-y-4">
-                  {/* Summary Pricing */}
-                  <div className="space-y-1.5 text-sm font-sans">
-                    <div className="flex justify-between text-[#2A211D]/75">
-                      <span>Bag Subtotal</span>
-                      <span className="font-semibold">₹{subtotal.toLocaleString('en-IN')}</span>
-                    </div>
-                    {discount > 0 && (
-                      <div className="flex justify-between text-green-700">
-                        <span>Royal Discount (Above ₹15K)</span>
-                        <span className="font-semibold">-₹{discount.toLocaleString('en-IN')}</span>
-                      </div>
-                    )}
-                    <div className="flex justify-between text-[#2A211D]/75">
-                      <span>Heritage Care & GST (5%)</span>
-                      <span className="font-semibold">₹{royalTax.toLocaleString('en-IN')}</span>
-                    </div>
-                    <div className="flex justify-between text-base font-bold text-[#5C1D24] pt-2 border-t border-[#D4AF37]/20 font-cinzel">
-                      <span>Total Amount</span>
-                      <span>₹{total.toLocaleString('en-IN')}</span>
-                    </div>
-                  </div>
-
                   {/* Customer Form */}
                   <form onSubmit={handleCheckout} className="space-y-2.5 pt-2">
                     <div>
@@ -293,39 +256,17 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
                 {/* Items grid */}
                 <div className="space-y-2 text-left font-sans text-xs">
                   <div className="font-bold border-b border-[#D4AF37]/20 pb-1 flex justify-between text-[#5C1D24]">
-                    <span>Item & Qty</span>
-                    <span>Amount</span>
+                    <span>Item & Description</span>
+                    <span>Quantity</span>
                   </div>
                   {cart.map((item) => (
-                    <div key={item.product.id} className="flex justify-between text-[11px] text-[#2A211D]/80">
+                    <div key={item.product.id} className="flex justify-between text-[11px] text-[#2A211D]/80 pb-1.5 border-b border-[#D4AF37]/10">
                       <span>
-                        {item.product.name} <span className="text-[#2A211D]/50">(x{item.quantity})</span>
+                        {item.product.name}
                       </span>
-                      <span>₹{(item.product.price * item.quantity).toLocaleString('en-IN')}</span>
+                      <span className="font-semibold">x{item.quantity}</span>
                     </div>
                   ))}
-                </div>
-
-                {/* Total receipt details */}
-                <div className="border-t border-dashed border-[#D4AF37] pt-2.5 mt-4 space-y-1 text-left text-xs font-sans">
-                  <div className="flex justify-between">
-                    <span>Subtotal:</span>
-                    <span>₹{subtotal.toLocaleString('en-IN')}</span>
-                  </div>
-                  {discount > 0 && (
-                    <div className="flex justify-between text-green-700">
-                      <span>Discount (10%):</span>
-                      <span>-₹{discount.toLocaleString('en-IN')}</span>
-                    </div>
-                  )}
-                  <div className="flex justify-between">
-                    <span>GST (5%):</span>
-                    <span>₹{royalTax.toLocaleString('en-IN')}</span>
-                  </div>
-                  <div className="flex justify-between text-base font-bold text-[#5C1D24] pt-2 border-t border-[#D4AF37]/20 font-cinzel">
-                    <span>Grand Total:</span>
-                    <span>₹{total.toLocaleString('en-IN')}</span>
-                  </div>
                 </div>
 
                 <div className="pt-4 flex flex-col items-center">
