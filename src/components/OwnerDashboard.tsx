@@ -14,6 +14,10 @@ interface OwnerDashboardProps {
 }
 
 const PRESET_IMAGES = [
+  { label: 'Checked Casual Shirt', value: '/casual_wear_1.png' },
+  { label: 'Sand Linen Shirt', value: '/casual_wear_2.png' },
+  { label: 'Forest Checked Shirt', value: '/casual_wear_3.png' },
+  { label: 'Slate Grey Shirt', value: '/casual_wear_4.png' },
   { label: 'White Bandhani Shirt', value: '/formal_white_bandhani.png' },
   { label: 'Sky Blue Embroidered Shirt', value: '/formal_blue_emb.png' },
   { label: 'Yellow Mandarin Shirt', value: '/formal_yellow_kurta.png' },

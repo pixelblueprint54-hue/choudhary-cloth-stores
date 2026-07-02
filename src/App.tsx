@@ -82,26 +82,27 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "prod-m6",
-    name: "Men's Casual Indigo Denim Shirt",
+    name: "Men's Forest Checked Shirt",
     category: "Shirts (Formal & Casual)",
     price: 1799,
-    rating: 4.7,
+    rating: 4.8,
     reviews: 124,
-    description: "Washed indigo cotton denim shirt with dual chest pockets and contrast stitching details.",
+    description: "Comfortable forest green and white plaid casual button-down shirt in premium woven cotton.",
     textureType: "kurta",
-    colorPalette: { primary: "#2563EB", secondary: "#1D4ED8", accent: "#FAF6F0" }
+    colorPalette: { primary: "#1E3A8A", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/casual_wear_3.png"
   },
   {
     id: "prod-m7",
-    name: "Men's Luxury Cotton Crewneck T-Shirt",
-    category: "T-Shirts",
-    price: 999,
+    name: "Men's Classic Checked Casual Shirt",
+    category: "Shirts (Formal & Casual)",
+    price: 1999,
     rating: 4.9,
     reviews: 310,
-    description: "Ultra-soft combed cotton crewneck t-shirt offering a clean look and high breathability.",
+    description: "Stylish checked open-front shirt layered over a clean white crewneck tee, paired with beige chinos.",
     textureType: "kurta",
-    colorPalette: { primary: "#EAB308", secondary: "#78350F", accent: "#FAF6F0" },
-    imageUrl: "/formal_yellow_kurta.png"
+    colorPalette: { primary: "#4B5563", secondary: "#FAF6F0", accent: "#D7C49E" },
+    imageUrl: "/casual_wear_1.png"
   },
   {
     id: "prod-m8",
@@ -161,14 +162,15 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "prod-m13",
-    name: "Men's Soft Cotton Pajama Set",
-    category: "Nightwear",
-    price: 1499,
+    name: "Men's Slate Grey Casual Shirt",
+    category: "Shirts (Formal & Casual)",
+    price: 1699,
     rating: 4.7,
     reviews: 55,
-    description: "Comfortable two-piece nightwear set featuring a button-down collar shirt and elastic pajama pants.",
+    description: "Minimalist slate grey casual button-down shirt in premium soft linen, featuring rolled long sleeves.",
     textureType: "kurta",
-    colorPalette: { primary: "#0284C7", secondary: "#0369A1", accent: "#FAF6F0" }
+    colorPalette: { primary: "#4B5563", secondary: "#1F2937", accent: "#FAF6F0" },
+    imageUrl: "/casual_wear_4.png"
   },
   {
     id: "prod-m14",
@@ -195,15 +197,15 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "prod-m16",
-    name: "Men's Light Summer Linen Shirt",
-    category: "Seasonal Wear",
+    name: "Men's Premium Sand Linen Shirt",
+    category: "Shirts (Formal & Casual)",
     price: 1999,
     rating: 4.8,
     reviews: 110,
-    description: "Ultra-lightweight pure linen shirt with a band collar, designed for summer heat.",
+    description: "Sophisticated beige band-collar casual linen shirt, styled with folded cuffs and dark formal trousers.",
     textureType: "kurta",
-    colorPalette: { primary: "#38BDF8", secondary: "#FAF6F0", accent: "#1E293B" },
-    imageUrl: "/formal_blue_emb.png"
+    colorPalette: { primary: "#FAF6F0", secondary: "#1E293B", accent: "#D4AF37" },
+    imageUrl: "/casual_wear_2.png"
   },
   {
     id: "prod-m17",
@@ -650,7 +652,7 @@ function App() {
       try {
         const parsed = JSON.parse(saved);
         // Automatically upgrade existing store inventory to include kids collection (with your specific upscaled boys & girls images)
-        const needsUpgrade = !parsed.some((p: any) => p.id === "prod-m1") || parsed.some((p: any) => p.id === "prod-m1" && p.category.includes("Men's Collection")) || parsed.some((p: any) => p.id === "prod-1" || p.name.includes("SRK"));
+        const needsUpgrade = !parsed.some((p: any) => p.id === "prod-m1") || !parsed.some((p: any) => p.id === "prod-m6" && p.name.includes("Forest")) || parsed.some((p: any) => p.id === "prod-m1" && p.category.includes("Men's Collection")) || parsed.some((p: any) => p.id === "prod-1" || p.name.includes("SRK"));
         if (Array.isArray(parsed) && parsed.length > 0 && needsUpgrade) {
           localStorage.setItem('CCS_PRODUCTS', JSON.stringify(PRODUCTS));
           return PRODUCTS;
