@@ -33,7 +33,8 @@ const PRODUCTS: Product[] = [
     reviews: 215,
     description: "Classic five-pocket jeans crafted from durable, premium stretch denim for all-day comfort.",
     textureType: "bandhgala",
-    colorPalette: { primary: "#1E3A8A", secondary: "#3B82F6", accent: "#FAF6F0" }
+    colorPalette: { primary: "#1E3A8A", secondary: "#3B82F6", accent: "#FAF6F0" },
+    imageUrl: "/jeans_1.png"
   },
   {
     id: "prod-m1-2",
@@ -44,7 +45,8 @@ const PRODUCTS: Product[] = [
     reviews: 182,
     description: "Modern slim-cut jeans in a deep indigo dark wash, crafted from heavy-duty stretch denim.",
     textureType: "bandhgala",
-    colorPalette: { primary: "#1A2530", secondary: "#2A364F", accent: "#FAF6F0" }
+    colorPalette: { primary: "#1A2530", secondary: "#2A364F", accent: "#FAF6F0" },
+    imageUrl: "/jeans_4.png"
   },
   {
     id: "prod-m1-3",
@@ -55,7 +57,8 @@ const PRODUCTS: Product[] = [
     reviews: 95,
     description: "Classic vintage wash blue jeans, featuring subtle distressed highlights and a relaxed straight-leg fit.",
     textureType: "bandhgala",
-    colorPalette: { primary: "#3B82F6", secondary: "#60A5FA", accent: "#FAF6F0" }
+    colorPalette: { primary: "#3B82F6", secondary: "#60A5FA", accent: "#FAF6F0" },
+    imageUrl: "/jeans_11.png"
   },
   {
     id: "prod-m1-4",
@@ -66,7 +69,104 @@ const PRODUCTS: Product[] = [
     reviews: 112,
     description: "Jet black active-fit jeans woven with premium Lycra fibers for maximum flexibility and movement.",
     textureType: "bandhgala",
-    colorPalette: { primary: "#111111", secondary: "#1E293B", accent: "#FAF6F0" }
+    colorPalette: { primary: "#111111", secondary: "#1E293B", accent: "#FAF6F0" },
+    imageUrl: "/jeans_3.png"
+  },
+  {
+    id: "prod-m1-5",
+    name: "Men's Premium Grey Slim Fit Jeans",
+    category: "Jeans",
+    price: 2399,
+    rating: 4.8,
+    reviews: 84,
+    description: "Tailored grey slim fit jeans in a soft stretch fabric, perfect for modern casual styling.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#6B7280", secondary: "#9CA3AF", accent: "#FAF6F0" },
+    imageUrl: "/jeans_5.png"
+  },
+  {
+    id: "prod-m1-6",
+    name: "Men's Relaxed Light Wash Jeans",
+    category: "Jeans",
+    price: 2599,
+    rating: 4.9,
+    reviews: 142,
+    description: "Comfortable baggy light wash denim jeans, featuring a classic streetwear-inspired silhouette.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#93C5FD", secondary: "#BFDBFE", accent: "#FAF6F0" },
+    imageUrl: "/jeans_6.png"
+  },
+  {
+    id: "prod-m1-7",
+    name: "Men's Heritage Dark Grey Jeans",
+    category: "Jeans",
+    price: 2499,
+    rating: 4.7,
+    reviews: 73,
+    description: "Vintage-inspired dark grey relaxed jeans, structured with heavy washed cotton denim.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#374151", secondary: "#4B5563", accent: "#FAF6F0" },
+    imageUrl: "/jeans_8.png"
+  },
+  {
+    id: "prod-m1-8",
+    name: "Men's Tailored Black Slim Jeans",
+    category: "Jeans",
+    price: 2699,
+    rating: 4.8,
+    reviews: 67,
+    description: "Sleek all-black slim fit jeans with minimal details, offering an elegant semi-formal look.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#111111", secondary: "#000000", accent: "#FAF6F0" },
+    imageUrl: "/jeans_9.png"
+  },
+  {
+    id: "prod-m1-9",
+    name: "Men's Loose Fit Light Wash Jeans",
+    category: "Jeans",
+    price: 2299,
+    rating: 4.6,
+    reviews: 58,
+    description: "Loose straight-cut jeans in a summer light wash, crafted from lightweight breathable denim.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#A5F3FC", secondary: "#CFFAFE", accent: "#FAF6F0" },
+    imageUrl: "/jeans_10.png"
+  },
+  {
+    id: "prod-m1-10",
+    name: "Men's Streetwear Baggy Jeans",
+    category: "Jeans",
+    price: 2799,
+    rating: 4.9,
+    reviews: 104,
+    description: "Heavyweight dark wash baggy denim jeans featuring custom distress detailing for urban streetwear.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#1E3A8A", secondary: "#111827", accent: "#FAF6F0" },
+    imageUrl: "/jeans_12.png"
+  },
+  {
+    id: "prod-m1-11",
+    name: "Men's Premium Classic Blue Jeans",
+    category: "Jeans",
+    price: 2499,
+    rating: 4.8,
+    reviews: 90,
+    description: "Standard mid-rise classic blue denim jeans featuring a regular fit and durable construction.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#2563EB", secondary: "#3B82F6", accent: "#FAF6F0" },
+    imageUrl: "/jeans_7.png"
+  },
+  {
+    id: "prod-m1-12",
+    name: "Men's Urban Carbon Grey Jeans",
+    category: "Jeans",
+    price: 2399,
+    rating: 4.7,
+    reviews: 51,
+    description: "Carbon grey denim jeans styled in a comfortable straight cut with signature metal buttons.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#4B5563", secondary: "#374151", accent: "#FAF6F0" },
+    imageUrl: "/jeans_2.png"
   },
   {
     id: "prod-m2",

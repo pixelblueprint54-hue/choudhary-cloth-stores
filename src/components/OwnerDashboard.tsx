@@ -14,6 +14,18 @@ interface OwnerDashboardProps {
 }
 
 const PRESET_IMAGES = [
+  { label: 'Jeans: Comfort Fit Blue', value: '/jeans_1.png' },
+  { label: 'Jeans: Carbon Grey Straight', value: '/jeans_2.png' },
+  { label: 'Jeans: Solid Black Relaxed', value: '/jeans_3.png' },
+  { label: 'Jeans: Dark Wash Slim', value: '/jeans_4.png' },
+  { label: 'Jeans: Grey Stretch Slim', value: '/jeans_5.png' },
+  { label: 'Jeans: Light Wash Baggy', value: '/jeans_6.png' },
+  { label: 'Jeans: Classic Blue Regular', value: '/jeans_7.png' },
+  { label: 'Jeans: Dark Grey Vintage', value: '/jeans_8.png' },
+  { label: 'Jeans: Tailored Black Slim', value: '/jeans_9.png' },
+  { label: 'Jeans: Light Wash Loose', value: '/jeans_10.png' },
+  { label: 'Jeans: Blue Vintage Side-view', value: '/jeans_11.png' },
+  { label: 'Jeans: Streetwear Baggy', value: '/jeans_12.png' },
   { label: 'Checked Casual Shirt', value: '/casual_wear_1.png' },
   { label: 'Sand Linen Shirt', value: '/casual_wear_2.png' },
   { label: 'Forest Checked Shirt', value: '/casual_wear_3.png' },
