@@ -14,6 +14,11 @@ interface OwnerDashboardProps {
 }
 
 const PRESET_IMAGES = [
+  { label: 'Trousers: Khaki Cotton Chinos', value: '/trousers_1.png' },
+  { label: 'Trousers: Cream Pleated Formal', value: '/trousers_2.png' },
+  { label: 'Trousers: Flat-Front Brown Formal', value: '/trousers_3.png' },
+  { label: 'Trousers: Tapered Charcoal Grey', value: '/trousers_4.png' },
+  { label: 'Trousers: Relaxed Olive Linen', value: '/trousers_5.png' },
   { label: 'Jeans: Comfort Fit Blue', value: '/jeans_1.png' },
   { label: 'Jeans: Carbon Grey Straight', value: '/jeans_2.png' },
   { label: 'Jeans: Solid Black Relaxed', value: '/jeans_3.png' },

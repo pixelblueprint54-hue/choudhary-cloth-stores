@@ -170,14 +170,63 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "prod-m2",
-    name: "Men's Tailored Chino Trousers",
+    name: "Men's Premium Cotton Chino Trousers",
     category: "Trousers",
     price: 2499,
     rating: 4.7,
     reviews: 142,
-    description: "Smart-casual flat-front chino trousers tailored from breathable cotton-spandex twill.",
+    description: "Smart-casual flat-front chino trousers in a classic khaki beige color, tailored for premium comfort.",
     textureType: "bandhgala",
-    colorPalette: { primary: "#D7C49E", secondary: "#A18262", accent: "#FAF6F0" }
+    colorPalette: { primary: "#D7C49E", secondary: "#A18262", accent: "#FAF6F0" },
+    imageUrl: "/trousers_1.png"
+  },
+  {
+    id: "prod-m2-2",
+    name: "Men's Classic Pleated Formal Trousers",
+    category: "Trousers",
+    price: 2799,
+    rating: 4.9,
+    reviews: 110,
+    description: "Luxurious cream-white pleated formal trousers designed for wedding receptions and business events.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#F3ECE0", secondary: "#111111", accent: "#D4AF37" },
+    imageUrl: "/trousers_2.png"
+  },
+  {
+    id: "prod-m2-3",
+    name: "Men's Flat-Front Brown Formal Trousers",
+    category: "Trousers",
+    price: 2699,
+    rating: 4.8,
+    reviews: 95,
+    description: "Tailored flat-front trousers in warm chocolate brown, offering a clean line and premium drape.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#78350F", secondary: "#FAF6F0", accent: "#A18262" },
+    imageUrl: "/trousers_3.png"
+  },
+  {
+    id: "prod-m2-4",
+    name: "Men's Tapered Grey Formal Trousers",
+    category: "Trousers",
+    price: 2599,
+    rating: 4.8,
+    reviews: 80,
+    description: "Modern tapered-fit formal trousers in charcoal grey with signature side waist adjusters.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#4B5563", secondary: "#FAF6F0", accent: "#374151" },
+    imageUrl: "/trousers_4.png"
+  },
+  {
+    id: "prod-m2-5",
+    name: "Men's Relaxed Fit Olive Trousers",
+    category: "Trousers",
+    price: 2299,
+    rating: 4.6,
+    reviews: 62,
+    description: "Casual relaxed-fit trousers in rich olive brown linen, ideal for summer styling.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#A18262", secondary: "#78350F", accent: "#FAF6F0" },
+    imageUrl: "/trousers_5.png"
   },
   {
     id: "prod-m3",
@@ -782,7 +831,7 @@ function App() {
   const [products, setProducts] = useState<Product[]>(() => {
     const saved = localStorage.getItem('CCS_PRODUCTS');
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
-    const CATALOG_VERSION = 'v5';
+    const CATALOG_VERSION = 'v6';
     if (saved && savedVer === CATALOG_VERSION) {
       try {
         const parsed = JSON.parse(saved);
