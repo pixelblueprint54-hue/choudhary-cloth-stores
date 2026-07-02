@@ -421,116 +421,6 @@ const PRODUCTS: Product[] = [
     imageUrl: "/casual_pants_5.png"
   },
   {
-    id: "prod-m4-6",
-    name: "Men's Dark Grey Cozy Corduroy Pants",
-    category: "Casual Pants",
-    price: 2599,
-    rating: 4.7,
-    reviews: 48,
-    description: "Vintage-inspired ribbed corduroy trousers in charcoal grey, ideal for autumn styling.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#374151", secondary: "#1F2937", accent: "#FAF6F0" }
-  },
-  {
-    id: "prod-m4-7",
-    name: "Men's Tan Cotton Twill Casual Pants",
-    category: "Casual Pants",
-    price: 1799,
-    rating: 4.6,
-    reviews: 104,
-    description: "Classic flat-front cotton twill pants offering a soft finish and reliable daily wear durability.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#A18262", secondary: "#D7C49E", accent: "#FAF6F0" }
-  },
-  {
-    id: "prod-m4-8",
-    name: "Men's Brick Red Relaxed Chinos",
-    category: "Casual Pants",
-    price: 1999,
-    rating: 4.7,
-    reviews: 53,
-    description: "Garment-dyed cotton chinos in a rich brick red shade, adding a pop of color to your casual wardrobe.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#5C1D24", secondary: "#FAF6F0", accent: "#D4AF37" }
-  },
-  {
-    id: "prod-m4-9",
-    name: "Men's Forest Green Elastic Waist Pants",
-    category: "Casual Pants",
-    price: 1899,
-    rating: 4.8,
-    reviews: 69,
-    description: "Easy pull-on pants in forest green with a flexible elastic waist and straight-leg drape.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#15803D", secondary: "#FAF6F0", accent: "#EAB308" }
-  },
-  {
-    id: "prod-m4-10",
-    name: "Men's Charcoal Grey Loungewear Pants",
-    category: "Casual Pants",
-    price: 1699,
-    rating: 4.9,
-    reviews: 120,
-    description: "Ultra-soft modal blend sleep and lounge pants in charcoal grey, offering maximum breathability.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#1F2937", secondary: "#4B5563", accent: "#FAF6F0" }
-  },
-  {
-    id: "prod-m4-11",
-    name: "Men's Tobacco Brown Rugged Cargo Pants",
-    category: "Casual Pants",
-    price: 2699,
-    rating: 4.8,
-    reviews: 87,
-    description: "Heavy-duty washed canvas cargo pants in tobacco brown, featuring reinforced stitching.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#78350F", secondary: "#FAF6F0", accent: "#451A03" }
-  },
-  {
-    id: "prod-m4-12",
-    name: "Men's Mustard Yellow Casual Chinos",
-    category: "Casual Pants",
-    price: 1999,
-    rating: 4.7,
-    reviews: 44,
-    description: "Vibrant mustard yellow stretch-cotton chinos tailored in a modern slim-casual fit.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#CA8A04", secondary: "#FAF6F0", accent: "#EAB308" }
-  },
-  {
-    id: "prod-m4-13",
-    name: "Men's Off-White Seersucker Summer Pants",
-    category: "Casual Pants",
-    price: 2399,
-    rating: 4.8,
-    reviews: 55,
-    description: "Puckered seersucker cotton trousers in off-white, designed to keep you cool on warm days.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#FAF6F0", secondary: "#D7C49E", accent: "#FAF6F0" }
-  },
-  {
-    id: "prod-m4-14",
-    name: "Men's Light Blue Casual Chambray Pants",
-    category: "Casual Pants",
-    price: 2099,
-    rating: 4.7,
-    reviews: 63,
-    description: "Lightweight chambray weave casual pants, offering the look of denim with the feel of linen.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#60A5FA", secondary: "#FAF6F0", accent: "#93C5FD" }
-  },
-  {
-    id: "prod-m4-15",
-    name: "Men's Active Knit Comfort Joggers",
-    category: "Casual Pants",
-    price: 2199,
-    rating: 4.8,
-    reviews: 98,
-    description: "High-performance tech-knit jogger pants in black with moisture-wicking technology.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#111111", secondary: "#1E293B", accent: "#FAF6F0" }
-  },
-  {
     id: "prod-m5",
     name: "Men's Premium Cotton Formal Shirt",
     category: "Shirts (Formal & Casual)",
@@ -1111,7 +1001,7 @@ function App() {
   const [products, setProducts] = useState<Product[]>(() => {
     const saved = localStorage.getItem('CCS_PRODUCTS');
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
-    const CATALOG_VERSION = 'v9';
+    const CATALOG_VERSION = 'v10';
     if (saved && savedVer === CATALOG_VERSION) {
       try {
         const parsed = JSON.parse(saved);
