@@ -25,3 +25,6 @@ dist-ssr
 
 # Project Zip Archive
 choudhary-cloth-stores.zip
+
+.vercel
+.env*
