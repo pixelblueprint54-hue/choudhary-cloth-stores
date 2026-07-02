@@ -469,6 +469,66 @@ const PRODUCTS: Product[] = [
     imageUrl: "/jacket_1.png"
   },
   {
+    id: "prod-m8-2",
+    name: "Men's Classic Hooded Puffer Jacket",
+    category: "Jackets",
+    price: 3499,
+    rating: 4.8,
+    reviews: 95,
+    description: "Insulated classic black puffer jacket featuring a warm hood, front zip closure, and lightweight comfort.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#111111", secondary: "#FAF6F0", accent: "#374151" },
+    imageUrl: "/jacket_2.png"
+  },
+  {
+    id: "prod-m8-3",
+    name: "Men's Active Zip-Up Sports Jacket",
+    category: "Jackets",
+    price: 2799,
+    rating: 4.7,
+    reviews: 60,
+    description: "Sleek navy blue athletic zip-up jacket tailored in a breathable performance fabric with signature cuffs.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#1E3B8A", secondary: "#FAF6F0", accent: "#93C5FD" },
+    imageUrl: "/jacket_3.png"
+  },
+  {
+    id: "prod-m8-4",
+    name: "Men's Premium Olive Bomber Jacket",
+    category: "Jackets",
+    price: 3999,
+    rating: 4.8,
+    reviews: 74,
+    description: "Classic utility bomber jacket in rich olive green, featuring a ribbed stand collar and zipped front.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#4D7C0F", secondary: "#FAF6F0", accent: "#1E293B" },
+    imageUrl: "/jacket_4.png"
+  },
+  {
+    id: "prod-m8-5",
+    name: "Men's Heritage Checked Flannel Jacket",
+    category: "Jackets",
+    price: 2999,
+    rating: 4.9,
+    reviews: 112,
+    description: "Heavyweight checked flannel button-down jacket in a blue and off-white pattern, ideal for layering.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#1E293B", secondary: "#FAF6F0", accent: "#D7C49E" },
+    imageUrl: "/jacket_5.png"
+  },
+  {
+    id: "prod-m8-6",
+    name: "Men's Hooded Casual Windbreaker",
+    category: "Jackets",
+    price: 2899,
+    rating: 4.6,
+    reviews: 45,
+    description: "Lightweight weather-resistant windbreaker jacket in deep navy blue, complete with adjustable drawstrings.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#1E3B8A", secondary: "#374151", accent: "#FAF6F0" },
+    imageUrl: "/jacket_6.png"
+  },
+  {
     id: "prod-m9",
     name: "Men's Cozy Fleece Pullover Hoodie",
     category: "Hoodies",
@@ -1001,7 +1061,7 @@ function App() {
   const [products, setProducts] = useState<Product[]>(() => {
     const saved = localStorage.getItem('CCS_PRODUCTS');
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
-    const CATALOG_VERSION = 'v12';
+    const CATALOG_VERSION = 'v13';
     if (saved && savedVer === CATALOG_VERSION) {
       try {
         const parsed = JSON.parse(saved);

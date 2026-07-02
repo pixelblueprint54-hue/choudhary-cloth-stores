@@ -14,6 +14,11 @@ interface OwnerDashboardProps {
 }
 
 const PRESET_IMAGES = [
+  { label: 'Jackets: Black Hooded Puffer', value: '/jacket_2.png' },
+  { label: 'Jackets: Active Navy Sports', value: '/jacket_3.png' },
+  { label: 'Jackets: Premium Olive Bomber', value: '/jacket_4.png' },
+  { label: 'Jackets: Checked Flannel Shacket', value: '/jacket_5.png' },
+  { label: 'Jackets: Navy Casual Windbreaker', value: '/jacket_6.png' },
   { label: 'Jackets: Royal Indigo Nehru', value: '/jacket_1.png' },
   { label: 'Casual: Khaki Drawstring Chinos', value: '/casual_pants_1.png' },
   { label: 'Casual: Olive Green Linen', value: '/casual_pants_2.png' },
