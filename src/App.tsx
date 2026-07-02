@@ -866,37 +866,159 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "prod-m17",
-    name: "Men's Double-Breasted Wool Trench Coat",
+    name: "Men's Dixcy Scott White Thermal Top",
     category: "Seasonal Wear",
-    price: 6999,
-    rating: 5.0,
-    reviews: 42,
-    description: "Premium heavy double-breasted trench coat with structured shoulders for winter elegance.",
-    textureType: "bandhgala",
-    colorPalette: { primary: "#1E293B", secondary: "#0F172A", accent: "#FAF6F0" },
-    imageUrl: "/formal_coat.png"
+    price: 599,
+    rating: 4.7,
+    reviews: 210,
+    description: "Warm Dixcy Scott white thermal inner top with a round neck and full sleeves, perfect for winter.",
+    textureType: "kurta",
+    colorPalette: { primary: "#FAF6F0", secondary: "#E5E7EB", accent: "#9CA3AF" },
+    imageUrl: "/seasonal_1.png"
   },
   {
-    id: "prod-m18",
-    name: "Men's Beachside Summer Board Shorts",
+    id: "prod-m17-2",
+    name: "Men's Grey Striped Thermal Top",
     category: "Seasonal Wear",
-    price: 1199,
-    rating: 4.6,
-    reviews: 62,
-    description: "Quick-dry summer shorts featuring vibrant tropical prints, ready for the beach.",
+    price: 649,
+    rating: 4.8,
+    reviews: 185,
+    description: "Snug-fit grey striped thermal full-sleeve top with ribbed cuffs for added warmth.",
+    textureType: "kurta",
+    colorPalette: { primary: "#6B7280", secondary: "#374151", accent: "#FAF6F0" },
+    imageUrl: "/seasonal_2.png"
+  },
+  {
+    id: "prod-m17-3",
+    name: "Men's Teal Summer Polo Shirt",
+    category: "Seasonal Wear",
+    price: 1299,
+    rating: 4.7,
+    reviews: 98,
+    description: "Vibrant teal polo shirt in breathable cotton pique, a summer essential for casual outings.",
+    textureType: "kurta",
+    colorPalette: { primary: "#0D9488", secondary: "#FAF6F0", accent: "#1F2937" },
+    imageUrl: "/seasonal_3.png"
+  },
+  {
+    id: "prod-m17-4",
+    name: "Men's Light Blue Linen Summer Shirt",
+    category: "Seasonal Wear",
+    price: 1499,
+    rating: 4.8,
+    reviews: 76,
+    description: "Lightweight sky blue linen summer shirt with a Cuban collar and chest pocket, great for beach days.",
+    textureType: "kurta",
+    colorPalette: { primary: "#BAE6FD", secondary: "#FAF6F0", accent: "#0284C7" },
+    imageUrl: "/seasonal_4.png"
+  },
+  {
+    id: "prod-m17-5",
+    name: "Men's Teal Rainproof Tracksuit Set",
+    category: "Seasonal Wear",
+    price: 2799,
+    rating: 4.9,
+    reviews: 144,
+    description: "Durable teal and black two-piece hooded tracksuit set, rain-resistant for outdoor activities.",
     textureType: "bandhgala",
-    colorPalette: { primary: "#0D9488", secondary: "#14B8A6", accent: "#FAF6F0" }
+    colorPalette: { primary: "#0D9488", secondary: "#111111", accent: "#FAF6F0" },
+    imageUrl: "/seasonal_5.png"
+  },
+  {
+    id: "prod-m17-6",
+    name: "Men's Charcoal Thermal Full Sleeve Top",
+    category: "Seasonal Wear",
+    price: 699,
+    rating: 4.7,
+    reviews: 165,
+    description: "Premium charcoal grey thermal full-sleeve top with a round neck and body-hugging fit for warmth.",
+    textureType: "kurta",
+    colorPalette: { primary: "#374151", secondary: "#111111", accent: "#FAF6F0" },
+    imageUrl: "/seasonal_6.png"
+  },
+  {
+    id: "prod-m17-7",
+    name: "Men's White Graphic Print Tee",
+    category: "Seasonal Wear",
+    price: 999,
+    rating: 4.6,
+    reviews: 88,
+    description: "White oversized graphic print t-shirt with a trendy black scribble art design, paired with black jeans.",
+    textureType: "kurta",
+    colorPalette: { primary: "#FAF6F0", secondary: "#111111", accent: "#374151" },
+    imageUrl: "/seasonal_7.png"
   },
   {
     id: "prod-m19",
-    name: "Men's Active Dry-Fit Training Tee",
+    name: "Men's Purple Chill Out Oversized Tee",
     category: "T-Shirts",
-    price: 1099,
+    price: 999,
     rating: 4.8,
     reviews: 154,
-    description: "Performance athletic t-shirt with mesh ventilation panels to keep you dry and active.",
+    description: "Trendy oversized purple Leotude Chill Out graphic tee with bold back print — perfect street style.",
     textureType: "kurta",
-    colorPalette: { primary: "#DC2626", secondary: "#EF4444", accent: "#FAF6F0" }
+    colorPalette: { primary: "#7C3AED", secondary: "#FAF6F0", accent: "#DDD6FE" },
+    imageUrl: "/tshirt_1.png"
+  },
+  {
+    id: "prod-m19-2",
+    name: "Men's White Teal Zip Polo T-Shirt",
+    category: "T-Shirts",
+    price: 1299,
+    rating: 4.7,
+    reviews: 90,
+    description: "Premium white and teal colorblock half-zip polo t-shirt with ribbed centre panel design.",
+    textureType: "kurta",
+    colorPalette: { primary: "#FAF6F0", secondary: "#0D9488", accent: "#111111" },
+    imageUrl: "/tshirt_2.png"
+  },
+  {
+    id: "prod-m19-3",
+    name: "Men's Maroon Break Rules Graphic Tee",
+    category: "T-Shirts",
+    price: 1099,
+    rating: 4.9,
+    reviews: 200,
+    description: "Bold maroon oversized graphic t-shirt with a striking 'Break Rules' back print in white lettering.",
+    textureType: "kurta",
+    colorPalette: { primary: "#5C1D24", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/tshirt_3.png"
+  },
+  {
+    id: "prod-m19-4",
+    name: "Men's Black Allen Solly Polo Tee",
+    category: "T-Shirts",
+    price: 1199,
+    rating: 4.8,
+    reviews: 175,
+    description: "Classic black polo t-shirt by Allen Solly with embroidered logo and a comfortable regular fit.",
+    textureType: "kurta",
+    colorPalette: { primary: "#111111", secondary: "#FAF6F0", accent: "#374151" },
+    imageUrl: "/tshirt_4.png"
+  },
+  {
+    id: "prod-m19-5",
+    name: "Men's Beige Muscle Fit Polo Tee",
+    category: "T-Shirts",
+    price: 1399,
+    rating: 4.7,
+    reviews: 88,
+    description: "Smart beige muscle-fit polo t-shirt with contrast black striped sleeve accents and embroidered chest logo.",
+    textureType: "kurta",
+    colorPalette: { primary: "#D4B896", secondary: "#111111", accent: "#FAF6F0" },
+    imageUrl: "/tshirt_5.png"
+  },
+  {
+    id: "prod-m19-6",
+    name: "Men's Olive Military Zip Polo Tee",
+    category: "T-Shirts",
+    price: 1499,
+    rating: 4.9,
+    reviews: 120,
+    description: "Tactical olive green half-zip polo tee with a USA flag patch on the sleeve — sporty military style.",
+    textureType: "kurta",
+    colorPalette: { primary: "#4D7C0F", secondary: "#FAF6F0", accent: "#374151" },
+    imageUrl: "/tshirt_6.png"
   },
   {
     id: "prod-m20",
@@ -1304,7 +1426,7 @@ function App() {
 
   // Dynamic products state with localStorage persistence
   const [products, setProducts] = useState<Product[]>(() => {
-    const CATALOG_VERSION = 'v19-20260702';
+    const CATALOG_VERSION = 'v20-20260702';
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
     // Always reset if version doesn't match — ensures new deploys are always fresh
     if (savedVer !== CATALOG_VERSION) {
