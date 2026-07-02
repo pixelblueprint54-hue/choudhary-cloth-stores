@@ -14,6 +14,11 @@ interface OwnerDashboardProps {
 }
 
 const PRESET_IMAGES = [
+  { label: 'Sweaters: Olive Quarter-Zip', value: '/sweater_1.png' },
+  { label: 'Sweaters: Beige Quarter-Zip', value: '/sweater_2.png' },
+  { label: 'Sweaters: Black Colorblock Polo', value: '/sweater_3.png' },
+  { label: 'Sweaters: Black Zip-Up Hoodie', value: '/sweater_4.png' },
+  { label: 'Sweaters: Classic Black V-Neck', value: '/sweater_5.png' },
   { label: 'Hoodies: Los Angeles Grey', value: '/hoodie_1.png' },
   { label: 'Hoodies: Brooklyn Quarter-Zip', value: '/hoodie_2.png' },
   { label: 'Hoodies: Classic Black Pullover', value: '/hoodie_3.png' },

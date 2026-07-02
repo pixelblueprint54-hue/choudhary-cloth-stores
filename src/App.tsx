@@ -590,14 +590,63 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "prod-m10",
-    name: "Men's Cable-Knit Crewneck Sweater",
+    name: "Men's Olive Quarter-Zip Ribbed Sweater",
     category: "Sweaters",
     price: 2999,
-    rating: 4.7,
+    rating: 4.8,
     reviews: 92,
-    description: "Classic cable-knit sweater made from a premium wool blend to keep you cozy during winter.",
+    description: "Premium olive-brown ribbed half-zip sweater with a mock collar, perfect for casual and smart-casual looks.",
     textureType: "kurta",
-    colorPalette: { primary: "#0F766E", secondary: "#115E59", accent: "#FAF6F0" }
+    colorPalette: { primary: "#78350F", secondary: "#FAF6F0", accent: "#451A03" },
+    imageUrl: "/sweater_1.png"
+  },
+  {
+    id: "prod-m10-2",
+    name: "Men's Beige Quarter-Zip Pullover",
+    category: "Sweaters",
+    price: 2799,
+    rating: 4.7,
+    reviews: 75,
+    description: "Soft beige ribbed quarter-zip pullover sweater with a clean minimalist design, ideal for layering.",
+    textureType: "kurta",
+    colorPalette: { primary: "#D4B896", secondary: "#FAF6F0", accent: "#9CA3AF" },
+    imageUrl: "/sweater_2.png"
+  },
+  {
+    id: "prod-m10-3",
+    name: "Men's Black Colorblock Polo Sweater",
+    category: "Sweaters",
+    price: 3199,
+    rating: 4.9,
+    reviews: 60,
+    description: "Stylish black cable-knit polo sweater with beige and brown colorblock contrast stripes.",
+    textureType: "kurta",
+    colorPalette: { primary: "#111111", secondary: "#D4B896", accent: "#78350F" },
+    imageUrl: "/sweater_3.png"
+  },
+  {
+    id: "prod-m10-4",
+    name: "Men's Black Zip-Up Hoodie Sweater",
+    category: "Sweaters",
+    price: 2599,
+    rating: 4.7,
+    reviews: 88,
+    description: "Versatile full-zip black hoodie sweater with a fleece interior for added warmth and comfort.",
+    textureType: "kurta",
+    colorPalette: { primary: "#111111", secondary: "#374151", accent: "#FAF6F0" },
+    imageUrl: "/sweater_4.png"
+  },
+  {
+    id: "prod-m10-5",
+    name: "Men's Classic Black V-Neck Sweater",
+    category: "Sweaters",
+    price: 2499,
+    rating: 4.8,
+    reviews: 110,
+    description: "Timeless black V-neck sweater with subtle logo detail, perfect for formal and business-casual styling.",
+    textureType: "kurta",
+    colorPalette: { primary: "#111111", secondary: "#FAF6F0", accent: "#374151" },
+    imageUrl: "/sweater_5.png"
   },
   {
     id: "prod-m11",
@@ -1110,7 +1159,7 @@ function App() {
   const [products, setProducts] = useState<Product[]>(() => {
     const saved = localStorage.getItem('CCS_PRODUCTS');
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
-    const CATALOG_VERSION = 'v14';
+    const CATALOG_VERSION = 'v15';
     if (saved && savedVer === CATALOG_VERSION) {
       try {
         const parsed = JSON.parse(saved);
