@@ -16,7 +16,7 @@ export const AIDarbarStylist: React.FC<AIDarbarStylistProps> = ({ isOpen, onClos
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: 'bot',
-      text: "Khamma Ghani, Hukum! 🙏 Welcome to the Royal Darbar of Choudhary Cloth Stores. I am your personal Darbar Stylist.\n\nTell me, what grand occasion are we preparing for today? (Wedding, Festival, or Casual Royal styling?)",
+      text: "Khamma Ghani, Hukum! 🙏 Welcome to the Royal Darbar of Choudhary Cloth Stores. I am your personal Darbar Stylist.\n\nTell me, what are you looking for today? We have a complete A to Z Men's Collection (Jeans, Trousers, Shirts, T-Shirts, Jackets, etc.), as well as Boys' and Girls' readymade garments!",
       timestamp: new Date()
     }
   ]);

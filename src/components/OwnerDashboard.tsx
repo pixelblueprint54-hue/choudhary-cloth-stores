@@ -14,17 +14,28 @@ interface OwnerDashboardProps {
 }
 
 const PRESET_IMAGES = [
-  { label: 'SRK Obsidian Sherwani', value: '/sherwani_black_srk.png' },
-  { label: 'Maharaja Emerald Sherwani', value: '/sherwani_blue_actor.png' },
-  { label: 'Imperial Groom Ivory Sherwani', value: '/sherwani_gold_actor.png' },
-  { label: 'Jodhpuri Royal Suit', value: '/jodhpuri_suit.png' },
+  { label: 'White Bandhani Shirt', value: '/formal_white_bandhani.png' },
+  { label: 'Sky Blue Embroidered Shirt', value: '/formal_blue_emb.png' },
+  { label: 'Yellow Mandarin Shirt', value: '/formal_yellow_kurta.png' },
+  { label: 'Black Gold Embroidered Shirt', value: '/formal_black_emb.png' },
   { label: 'Indigo Nehru Jacket', value: '/indigo_jacket.png' },
   { label: 'Jaipur Gold Silk Kurta', value: '/jaipur_gold_kurta.png' },
-  { label: 'Jodhpuri Breeches Set', value: '/breeches_kurta.png' },
-  { label: 'Maharaja Dhoti & Kurta', value: '/dhoti_kurta_male.png' },
-  { label: 'Angrakha Jaipur Kurta', value: '/angrakha_kurta_male.png' },
-  { label: 'Pachrangi Leheriya Safa', value: '/pachrangi_safa.png' },
-  { label: 'Zardozi Mojari Jootis', value: '/zardozi_jootis.png' }
+  { label: 'Dhoti & Kurta Set', value: '/dhoti_kurta_male.png' },
+  { label: 'Angrakha Kurta Set', value: '/angrakha_kurta_male.png' },
+  { label: 'Zardozi Mojari Jootis', value: '/zardozi_jootis.png' },
+  { label: 'Srk Obsidian Sherwani', value: '/sherwani_black_srk.png' },
+  { label: 'Maharaja Emerald Sherwani', value: '/sherwani_blue_actor.png' },
+  { label: 'Ivory Sherwani Set', value: '/sherwani_gold_actor.png' },
+  { label: 'Boy Polo & Denim Set', value: '/kid_boy_1.png' },
+  { label: 'Boy Summer Linen Suit', value: '/kid_boy_2.png' },
+  { label: 'Boy Linen & Coral Set', value: '/kid_boy_3.png' },
+  { label: 'Boy Prince Vest Set', value: '/kid_boy_4.png' },
+  { label: 'Boy Striped Sweatshirt', value: '/kid_boy_5.png' },
+  { label: 'Girl Rainbow Tutu Set', value: '/kid_girl_1.png' },
+  { label: 'Girl Princess Lace Gown', value: '/kid_girl_2.png' },
+  { label: 'Girl Silk Ruffle Dress', value: '/kid_girl_3.png' },
+  { label: 'Girl Salwar Suit Set', value: '/kid_girl_4.png' },
+  { label: 'Girl Dungaree Set', value: '/kid_girl_5.png' }
 ];
 
 export const OwnerDashboard: React.FC<OwnerDashboardProps> = ({
@@ -41,14 +52,14 @@ export const OwnerDashboard: React.FC<OwnerDashboardProps> = ({
   
   // Form states
   const [name, setName] = useState('');
-  const [category, setCategory] = useState('Wedding Special');
+  const [category, setCategory] = useState('Jeans');
   const [price, setPrice] = useState<number>(0);
   const [description, setDescription] = useState('');
   const [textureType, setTextureType] = useState<'sherwani' | 'bandhgala' | 'kurta' | 'safa' | 'jooti' | 'saree'>('sherwani');
   const [primaryColor, setPrimaryColor] = useState('#5C1D24');
   const [secondaryColor, setSecondaryColor] = useState('#FAF6F0');
   const [accentColor, setAccentColor] = useState('#D4AF37');
-  const [imageUrl, setImageUrl] = useState('/sherwani_black_srk.png');
+  const [imageUrl, setImageUrl] = useState('/formal_white_bandhani.png');
   
   // Image presentation mode: 'preset' | 'url' | 'upload'
   const [imageMode, setImageMode] = useState<'preset' | 'url' | 'upload'>('preset');
@@ -198,14 +209,14 @@ export const OwnerDashboard: React.FC<OwnerDashboardProps> = ({
 
   const resetForm = () => {
     setName('');
-    setCategory('Wedding Special');
+    setCategory('Jeans');
     setPrice(0);
     setDescription('');
     setTextureType('sherwani');
     setPrimaryColor('#5C1D24');
     setSecondaryColor('#FAF6F0');
     setAccentColor('#D4AF37');
-    setImageUrl('/sherwani_black_srk.png');
+    setImageUrl('/formal_white_bandhani.png');
     setImageMode('preset');
     stopCamera();
     setEditingProduct(null);
@@ -341,11 +352,27 @@ export const OwnerDashboard: React.FC<OwnerDashboardProps> = ({
                   onChange={(e) => setCategory(e.target.value)}
                   className="w-full px-3 py-2 text-sm bg-white border border-[#D4AF37]/35 rounded-xl focus:border-[#5C1D24] focus:outline-none"
                 >
-                  <option value="Wedding Special">Wedding Special</option>
-                  <option value="Formal Wear">Formal Wear</option>
-                  <option value="Festive Collection">Festive Collection</option>
-                  <option value="Traditional Turban">Traditional Turban</option>
-                  <option value="Footwear">Footwear</option>
+                  <optgroup label="Main Collections">
+                    <option value="Boys' Collection (Age 0-18 Years)">Boys' Collection (Age 0-18 Years)</option>
+                    <option value="Girls' Collection (Age 0-13 Years)">Girls' Collection (Age 0-13 Years)</option>
+                  </optgroup>
+                  <optgroup label="Men's Garment Types">
+                    <option value="Jeans">Jeans</option>
+                    <option value="Trousers">Trousers</option>
+                    <option value="Formal Pants">Formal Pants</option>
+                    <option value="Casual Pants">Casual Pants</option>
+                    <option value="Shirts (Formal & Casual)">Shirts (Formal & Casual)</option>
+                    <option value="T-Shirts">T-Shirts</option>
+                    <option value="Jackets">Jackets</option>
+                    <option value="Hoodies">Hoodies</option>
+                    <option value="Sweaters">Sweaters</option>
+                    <option value="Shorts">Shorts</option>
+                    <option value="Track Pants">Track Pants</option>
+                    <option value="Nightwear">Nightwear</option>
+                    <option value="Innerwear">Innerwear</option>
+                    <option value="Ethnic Wear">Ethnic Wear</option>
+                    <option value="Seasonal Wear">Seasonal Wear</option>
+                  </optgroup>
                 </select>
               </div>
 

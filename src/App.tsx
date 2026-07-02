@@ -27,7 +27,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m1",
     name: "Men's Comfort Fit Denim Jeans",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Jeans",
     price: 1999,
     rating: 4.8,
     reviews: 215,
@@ -38,7 +38,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m2",
     name: "Men's Tailored Chino Trousers",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Trousers",
     price: 2499,
     rating: 4.7,
     reviews: 142,
@@ -49,7 +49,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m3",
     name: "Men's Sharp Charcoal Formal Pants",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Formal Pants",
     price: 2799,
     rating: 4.9,
     reviews: 98,
@@ -60,7 +60,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m4",
     name: "Men's Relaxed Fit Casual Pants",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Casual Pants",
     price: 1899,
     rating: 4.6,
     reviews: 84,
@@ -71,7 +71,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m5",
     name: "Men's Premium Cotton Formal Shirt",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Shirts (Formal & Casual)",
     price: 1699,
     rating: 4.8,
     reviews: 180,
@@ -83,7 +83,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m6",
     name: "Men's Casual Indigo Denim Shirt",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Shirts (Formal & Casual)",
     price: 1799,
     rating: 4.7,
     reviews: 124,
@@ -94,7 +94,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m7",
     name: "Men's Luxury Cotton Crewneck T-Shirt",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "T-Shirts",
     price: 999,
     rating: 4.9,
     reviews: 310,
@@ -106,7 +106,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m8",
     name: "Men's Heritage Brown Leather Jacket",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Jackets",
     price: 7999,
     rating: 4.9,
     reviews: 64,
@@ -118,7 +118,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m9",
     name: "Men's Cozy Fleece Pullover Hoodie",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Hoodies",
     price: 2499,
     rating: 4.8,
     reviews: 115,
@@ -129,7 +129,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m10",
     name: "Men's Cable-Knit Crewneck Sweater",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Sweaters",
     price: 2999,
     rating: 4.7,
     reviews: 92,
@@ -140,7 +140,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m11",
     name: "Men's Cotton Summer Cargo Shorts",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Shorts",
     price: 1299,
     rating: 4.6,
     reviews: 70,
@@ -151,7 +151,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m12",
     name: "Men's Athletic Fit Jogger Track Pants",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Track Pants",
     price: 1599,
     rating: 4.8,
     reviews: 160,
@@ -162,7 +162,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m13",
     name: "Men's Soft Cotton Pajama Set",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Nightwear",
     price: 1499,
     rating: 4.7,
     reviews: 55,
@@ -173,7 +173,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m14",
     name: "Men's Breathable Boxer Briefs Set",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Innerwear",
     price: 899,
     rating: 4.9,
     reviews: 240,
@@ -184,7 +184,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m15",
     name: "Men's Traditional Silk Kurta Pajama",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Ethnic Wear",
     price: 4500,
     rating: 4.9,
     reviews: 198,
@@ -196,7 +196,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m16",
     name: "Men's Light Summer Linen Shirt",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Seasonal Wear",
     price: 1999,
     rating: 4.8,
     reviews: 110,
@@ -208,7 +208,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m17",
     name: "Men's Double-Breasted Wool Trench Coat",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Seasonal Wear",
     price: 6999,
     rating: 5.0,
     reviews: 42,
@@ -220,7 +220,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m18",
     name: "Men's Beachside Summer Board Shorts",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "Seasonal Wear",
     price: 1199,
     rating: 4.6,
     reviews: 62,
@@ -231,7 +231,7 @@ const PRODUCTS: Product[] = [
   {
     id: "prod-m19",
     name: "Men's Active Dry-Fit Training Tee",
-    category: "Men's Collection (Age 0-50 Years)",
+    category: "T-Shirts",
     price: 1099,
     rating: 4.8,
     reviews: 154,
@@ -241,12 +241,12 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "prod-m20",
-    name: "Men's Royal Leather Belt & Wallet Set",
-    category: "Men's Collection (Age 0-50 Years)",
+    name: "Men's Traditional Mojari Jootis",
+    category: "Ethnic Wear",
     price: 1499,
     rating: 4.9,
     reviews: 180,
-    description: "Fine handcrafted genuine leather belt and matching bi-fold cardholder wallet set.",
+    description: "Fine handcrafted genuine leather and embroidered Mojari jootis.",
     textureType: "jooti",
     colorPalette: { primary: "#78350F", secondary: "#FAF6F0", accent: "#D4AF37" },
     imageUrl: "/zardozi_jootis.png"
@@ -650,7 +650,7 @@ function App() {
       try {
         const parsed = JSON.parse(saved);
         // Automatically upgrade existing store inventory to include kids collection (with your specific upscaled boys & girls images)
-        const needsUpgrade = !parsed.some((p: any) => p.category.includes("Men's Collection")) || parsed.some((p: any) => p.id === "prod-1" || p.name.includes("SRK"));
+        const needsUpgrade = !parsed.some((p: any) => p.id === "prod-m1") || parsed.some((p: any) => p.id === "prod-m1" && p.category.includes("Men's Collection")) || parsed.some((p: any) => p.id === "prod-1" || p.name.includes("SRK"));
         if (Array.isArray(parsed) && parsed.length > 0 && needsUpgrade) {
           localStorage.setItem('CCS_PRODUCTS', JSON.stringify(PRODUCTS));
           return PRODUCTS;
