@@ -1424,28 +1424,34 @@ function App() {
   const [isStylistOpen, setIsStylistOpen] = useState<boolean>(false);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  // Dynamic products state with localStorage persistence
+  // Dynamic products state — always starts from hardcoded PRODUCTS as the source of truth.
+  // Owner-added products from localStorage are merged ON TOP of the base catalog.
+  // This ensures all deployed products are always visible regardless of browser cache.
   const [products, setProducts] = useState<Product[]>(() => {
     const CATALOG_VERSION = 'v20-20260702';
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
-    // Always reset if version doesn't match — ensures new deploys are always fresh
+    
+    // Always clear stale cache on version mismatch
     if (savedVer !== CATALOG_VERSION) {
-      localStorage.removeItem('CCS_PRODUCTS');
-      localStorage.removeItem('CCS_CATALOG_VERSION');
+      localStorage.removeItem('CCS_OWNER_PRODUCTS');
+      localStorage.setItem('CCS_CATALOG_VERSION', CATALOG_VERSION);
     }
-    const saved = localStorage.getItem('CCS_PRODUCTS');
-    if (saved) {
+
+    // Load any owner-added products (from dashboard) and merge with base PRODUCTS
+    const ownerAdded = localStorage.getItem('CCS_OWNER_PRODUCTS');
+    if (ownerAdded) {
       try {
-        const parsed = JSON.parse(saved);
+        const parsed = JSON.parse(ownerAdded);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
+          // Merge: base catalog + owner additions, avoiding duplicates by id
+          const baseIds = new Set(PRODUCTS.map(p => p.id));
+          const newItems = parsed.filter((p: Product) => !baseIds.has(p.id));
+          return [...PRODUCTS, ...newItems];
         }
       } catch (e) {
-        console.error("Failed to parse local storage products:", e);
+        console.error("Failed to parse owner products:", e);
       }
     }
-    localStorage.setItem('CCS_PRODUCTS', JSON.stringify(PRODUCTS));
-    localStorage.setItem('CCS_CATALOG_VERSION', CATALOG_VERSION);
     return PRODUCTS;
   });
 
@@ -1461,7 +1467,10 @@ function App() {
 
   const saveProducts = (updatedList: Product[]) => {
     setProducts(updatedList);
-    localStorage.setItem('CCS_PRODUCTS', JSON.stringify(updatedList));
+    // Only persist owner-added products (not base catalog items) to avoid overriding deployed catalog
+    const baseIds = new Set(PRODUCTS.map(p => p.id));
+    const ownerAdded = updatedList.filter(p => !baseIds.has(p.id));
+    localStorage.setItem('CCS_OWNER_PRODUCTS', JSON.stringify(ownerAdded));
   };
 
   const handleAddProduct = (newProd: Product) => {
