@@ -241,6 +241,126 @@ const PRODUCTS: Product[] = [
     imageUrl: "/charcoal_pants.png"
   },
   {
+    id: "prod-m3-2",
+    name: "Men's Slim Fit Navy Formal Trousers",
+    category: "Formal Pants",
+    price: 2699,
+    rating: 4.9,
+    reviews: 145,
+    description: "Premium slim-fit dress pants in deep navy blue, offering a timeless look for weddings and business meetings.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#1E3B8A", secondary: "#FAF6F0", accent: "#3B82F6" },
+    imageUrl: "/formal_pants_1.png"
+  },
+  {
+    id: "prod-m3-3",
+    name: "Men's Tailored Olive Dress Pants",
+    category: "Formal Pants",
+    price: 2899,
+    rating: 4.8,
+    reviews: 73,
+    description: "Tailored olive green dress pants with sharp front creases, crafted from an all-season wool blend.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#4D7C0F", secondary: "#FAF6F0", accent: "#CA8A04" },
+    imageUrl: "/formal_pants_2.png"
+  },
+  {
+    id: "prod-m3-4",
+    name: "Men's Sartorial Beige Pleated Pants",
+    category: "Formal Pants",
+    price: 2799,
+    rating: 4.7,
+    reviews: 82,
+    description: "Classic double-pleated sartorial trousers in sand beige, offering comfort and style.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#D7C49E", secondary: "#FAF6F0", accent: "#A18262" },
+    imageUrl: "/formal_pants_3.png"
+  },
+  {
+    id: "prod-m3-5",
+    name: "Men's Light Grey Checked Trousers",
+    category: "Formal Pants",
+    price: 2999,
+    rating: 4.9,
+    reviews: 90,
+    description: "Light grey dress pants featuring a subtle prince-of-wales check pattern for executive styling.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#9CA3AF", secondary: "#FAF6F0", accent: "#4B5563" },
+    imageUrl: "/formal_pants_4.png"
+  },
+  {
+    id: "prod-m3-6",
+    name: "Men's Wine Red Tapered Dress Pants",
+    category: "Formal Pants",
+    price: 2999,
+    rating: 4.8,
+    reviews: 58,
+    description: "Rich burgundy wine-red dress trousers featuring a modern tapered cut and button tab closure.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#5C1D24", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/formal_pants_5.png"
+  },
+  {
+    id: "prod-m3-7",
+    name: "Men's Premium Brown Wool Trousers",
+    category: "Formal Pants",
+    price: 3299,
+    rating: 4.7,
+    reviews: 40,
+    description: "Heavy wool-blend trousers in chocolate brown, keeping you sharp and cozy in colder climates.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#78350F", secondary: "#FAF6F0", accent: "#451A03" },
+    imageUrl: "/formal_pants_6.png"
+  },
+  {
+    id: "prod-m3-8",
+    name: "Men's Tan Flat-Front Business Pants",
+    category: "Formal Pants",
+    price: 2499,
+    rating: 4.8,
+    reviews: 110,
+    description: "Flat-front tan business dress pants, crafted from breathable stretch cotton for day-long office comfort.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#A18262", secondary: "#FAF6F0", accent: "#D7C49E" },
+    imageUrl: "/formal_pants_7.png"
+  },
+  {
+    id: "prod-m3-9",
+    name: "Men's Cream White Sartorial Trousers",
+    category: "Formal Pants",
+    price: 3499,
+    rating: 5.0,
+    reviews: 35,
+    description: "Ultra-premium high-waisted sartorial trousers in off-white, featuring a wide-leg retro drape.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#F3ECE0", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/formal_pants_8.png"
+  },
+  {
+    id: "prod-m3-10",
+    name: "Men's Classic Glen Plaid Dress Pants",
+    category: "Formal Pants",
+    price: 3099,
+    rating: 4.9,
+    reviews: 64,
+    description: "Sophisticated glen plaid patterned formal dress pants in mixed grey wool, with side adjusters.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#374151", secondary: "#FAF6F0", accent: "#9CA3AF" },
+    imageUrl: "/formal_pants_9.png"
+  },
+  {
+    id: "prod-m3-11",
+    name: "Men's Charcoal Pinstripe Classic Trousers",
+    category: "Formal Pants",
+    price: 3199,
+    rating: 4.9,
+    reviews: 70,
+    description: "Classic vertical pinstripe dress pants in deep charcoal, tailored for executive power dressing.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#1F2937", secondary: "#FAF6F0", accent: "#4B5563" },
+    imageUrl: "/formal_pants_10.png"
+  },
+  {
     id: "prod-m4",
     name: "Men's Relaxed Fit Casual Pants",
     category: "Casual Pants",
@@ -833,7 +953,7 @@ function App() {
   const [products, setProducts] = useState<Product[]>(() => {
     const saved = localStorage.getItem('CCS_PRODUCTS');
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
-    const CATALOG_VERSION = 'v7';
+    const CATALOG_VERSION = 'v8';
     if (saved && savedVer === CATALOG_VERSION) {
       try {
         const parsed = JSON.parse(saved);

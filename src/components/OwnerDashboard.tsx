@@ -14,6 +14,16 @@ interface OwnerDashboardProps {
 }
 
 const PRESET_IMAGES = [
+  { label: 'Formal: Navy Blue Slim Fit', value: '/formal_pants_1.png' },
+  { label: 'Formal: Olive Green Tailored', value: '/formal_pants_2.png' },
+  { label: 'Formal: Beige Pleated Dress', value: '/formal_pants_3.png' },
+  { label: 'Formal: Light Grey Checked', value: '/formal_pants_4.png' },
+  { label: 'Formal: Burgundy Tapered Tab', value: '/formal_pants_5.png' },
+  { label: 'Formal: Brown Wool Blend', value: '/formal_pants_6.png' },
+  { label: 'Formal: Tan Flat-Front Business', value: '/formal_pants_7.png' },
+  { label: 'Formal: Cream White High-Waist', value: '/formal_pants_8.png' },
+  { label: 'Formal: Mixed Grey Glen Plaid', value: '/formal_pants_9.png' },
+  { label: 'Formal: Charcoal Pinstripe Classic', value: '/formal_pants_10.png' },
   { label: 'Pants: Charcoal Formal Trousers', value: '/charcoal_pants.png' },
   { label: 'Pants: Relaxed Casual Khaki', value: '/relaxed_pants.png' },
   { label: 'Trousers: Khaki Cotton Chinos', value: '/trousers_1.png' },
