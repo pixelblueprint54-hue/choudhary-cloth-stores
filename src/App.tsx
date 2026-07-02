@@ -650,14 +650,63 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "prod-m11",
-    name: "Men's Cotton Summer Cargo Shorts",
+    name: "Men's Black Ribbed Casual Shorts",
     category: "Shorts",
     price: 1299,
-    rating: 4.6,
-    reviews: 70,
-    description: "Multi-pocket cargo shorts in lightweight cotton, perfect for summer outings.",
+    rating: 4.7,
+    reviews: 88,
+    description: "Premium black ribbed cotton shorts with a branded leather patch pocket, perfect for casual outings.",
     textureType: "bandhgala",
-    colorPalette: { primary: "#4B5563", secondary: "#1F2937", accent: "#FAF6F0" }
+    colorPalette: { primary: "#111111", secondary: "#374151", accent: "#D4AF37" },
+    imageUrl: "/shorts_1.png"
+  },
+  {
+    id: "prod-m11-2",
+    name: "Men's Striped Seersucker Shorts",
+    category: "Shorts",
+    price: 1499,
+    rating: 4.6,
+    reviews: 65,
+    description: "Lightweight navy blue and white striped seersucker shorts with a relaxed fit and elasticated waist.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#1E3A8A", secondary: "#FAF6F0", accent: "#9CA3AF" },
+    imageUrl: "/shorts_2.png"
+  },
+  {
+    id: "prod-m11-3",
+    name: "Men's Grey Multi-Pocket Cargo Shorts",
+    category: "Shorts",
+    price: 1599,
+    rating: 4.8,
+    reviews: 120,
+    description: "Durable grey cargo shorts with multiple utility pockets and a comfortable drawstring waist.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#9CA3AF", secondary: "#374151", accent: "#FAF6F0" },
+    imageUrl: "/shorts_3.png"
+  },
+  {
+    id: "prod-m11-4",
+    name: "Men's Black Athletic Gym Shorts",
+    category: "Shorts",
+    price: 1199,
+    rating: 4.7,
+    reviews: 95,
+    description: "Classic black athletic shorts with an elastic waistband, ideal for gym sessions and daily wear.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#111111", secondary: "#1F2937", accent: "#FAF6F0" },
+    imageUrl: "/shorts_4.png"
+  },
+  {
+    id: "prod-m11-5",
+    name: "Men's Black Active Sport Shorts",
+    category: "Shorts",
+    price: 1099,
+    rating: 4.6,
+    reviews: 72,
+    description: "Breathable black sport shorts with minimal branding, perfect for running, training, and street style.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#111111", secondary: "#374151", accent: "#FAF6F0" },
+    imageUrl: "/shorts_5.png"
   },
   {
     id: "prod-m12",
@@ -1159,7 +1208,7 @@ function App() {
   const [products, setProducts] = useState<Product[]>(() => {
     const saved = localStorage.getItem('CCS_PRODUCTS');
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
-    const CATALOG_VERSION = 'v15';
+    const CATALOG_VERSION = 'v16';
     if (saved && savedVer === CATALOG_VERSION) {
       try {
         const parsed = JSON.parse(saved);
