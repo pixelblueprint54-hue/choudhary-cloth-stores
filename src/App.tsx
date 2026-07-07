@@ -1661,7 +1661,7 @@ function App() {
               <div className="relative z-10 bg-[#5C1D24]/85 backdrop-blur-xs text-[#FAF6F0] p-3 rounded-lg border border-[#D4AF37]/50 text-[10px] uppercase tracking-widest font-sans font-semibold flex items-center justify-between">
                 <span>Goregaon East near Police Chowky</span>
                 <a 
-                  href="https://www.google.com/maps/dir/?api=1&destination=Choudhary+Cloth+Stores+Shop+No-11+K-4+BMC+Colony+Goregaon+East+Mumbai+400065" 
+                  href="https://www.google.com/maps/search/?api=1&query=Choudhary+Cloth+Stores+Shop+No-11+K-4+BMC+Colony+Goregaon+East+Mumbai+400065" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[#D4AF37] hover:underline font-bold"
