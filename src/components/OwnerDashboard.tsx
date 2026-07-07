@@ -456,7 +456,6 @@ export const OwnerDashboard: React.FC<OwnerDashboardProps> = ({
                   <option value="kurta">Kurta Pajama</option>
                   <option value="safa">Safa / Turban</option>
                   <option value="jooti">Royal Jooti Mojari</option>
-                  <option value="saree">Saree Silhouette</option>
                 </select>
               </div>
 
