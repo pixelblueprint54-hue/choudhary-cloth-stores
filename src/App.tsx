@@ -1768,9 +1768,22 @@ function App() {
     : products.filter(p => p.category.trim().toLowerCase() === selectedCategory.trim().toLowerCase());
 
   return (
-    <div className="min-h-screen bg-[#FAF6F0] text-[#2A211D] font-sans selection:bg-[#5C1D24] selection:text-[#FAF6F0]">
+    <div className="min-h-screen bg-[#FAF6F0] text-[#2A211D] font-sans selection:bg-[#5C1D24] selection:text-[#FAF6F0] relative">
+      {/* Full Page Beach Background Video */}
+      {isEntered && (
+        <video
+          src="/beach_background.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="fixed inset-0 w-full h-full object-cover pointer-events-none"
+          style={{ opacity: 0.35, zIndex: 0 }}
+        />
+      )}
+
       {/* Royal Viewport Frame Border */}
-      <div className="royal-site-frame" />
+      <div className="royal-site-frame" style={{ zIndex: 40 }} />
       
       {/* 1. Opening Ceremony Canvas Overlay */}
       {!isEntered && (
@@ -1782,7 +1795,7 @@ function App() {
       )}
 
       {/* 2. Main Store Layout (Revealed after ceremony) */}
-      <div className={`transition-opacity duration-1000 ${isEntered ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+      <div className={`relative z-10 transition-opacity duration-1000 ${isEntered ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <Header 
           cartCount={totalCartCount} 
           onCartClick={() => setIsCartOpen(true)}
