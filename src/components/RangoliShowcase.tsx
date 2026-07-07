@@ -308,17 +308,13 @@ export const RangoliShowcase: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center justify-center py-6 select-none">
-      {/* Left Column: Cinematic Palace Loop Video */}
+      {/* Left Column: Cinematic Palace Image */}
       <div className="hidden lg:block lg:col-span-3 h-[380px] rounded-2xl border border-[#D4AF37]/35 overflow-hidden shadow-2xl relative bg-black">
-        <video
-          autoPlay
-          loop
-          muted={true}
-          playsInline
-          className="w-full h-full object-cover opacity-75"
-        >
-          <source src="/opening_gate.mp4" type="video/mp4" />
-        </video>
+        <img
+          src="/cinematic_palace_poster.png"
+          alt="Cinematic Palace Left"
+          className="w-full h-full object-cover opacity-80 select-none"
+        />
         {/* Decorative inner gold border frame */}
         <div className="absolute inset-2 border border-[#D4AF37]/25 rounded-lg pointer-events-none" />
       </div>
@@ -335,17 +331,13 @@ export const RangoliShowcase: React.FC = () => {
         </div>
       </div>
 
-      {/* Right Column: Cinematic Palace Loop Video */}
+      {/* Right Column: Cinematic Palace Image */}
       <div className="hidden lg:block lg:col-span-3 h-[380px] rounded-2xl border border-[#D4AF37]/35 overflow-hidden shadow-2xl relative bg-black">
-        <video
-          autoPlay
-          loop
-          muted={true}
-          playsInline
-          className="w-full h-full object-cover opacity-75"
-        >
-          <source src="/opening_gate.mp4" type="video/mp4" />
-        </video>
+        <img
+          src="/cinematic_palace_poster.png"
+          alt="Cinematic Palace Right"
+          className="w-full h-full object-cover opacity-80 select-none"
+        />
         {/* Decorative inner gold border frame */}
         <div className="absolute inset-2 border border-[#D4AF37]/25 rounded-lg pointer-events-none" />
       </div>

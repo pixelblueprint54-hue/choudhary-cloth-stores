@@ -1349,16 +1349,17 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#FAF6F0] text-[#2A211D] font-sans selection:bg-[#5C1D24] selection:text-[#FAF6F0] relative">
-      {/* Full Page Beach Background Video */}
+      {/* Full Page Palace Background Video */}
       {isEntered && (
         <video
-          src="/beach_background.mp4"
+          src="/opening_gate.mp4"
+          poster="/cinematic_palace_poster.png"
           autoPlay
           loop
           muted={true}
           playsInline
           className="fixed inset-0 w-full h-full object-cover pointer-events-none"
-          style={{ opacity: 0.35, zIndex: 0 }}
+          style={{ opacity: 0.07, zIndex: 0 }}
         />
       )}
 
