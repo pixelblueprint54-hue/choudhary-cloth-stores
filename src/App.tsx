@@ -1763,13 +1763,20 @@ function App() {
   const totalCartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   // Compute categories dynamically from active products to reflect any additions/deletions automatically
-  const categories = ['All', ...Array.from(new Set(products.map(p => p.category)))];
+  const categories = ['All', ...Array.from(new Set(products.map(p => p.category || 'Other')))];
   
   const filteredProducts = products.filter(p => {
-    const matchesCategory = selectedCategory === 'All' || p.category.trim().toLowerCase() === selectedCategory.trim().toLowerCase();
-    const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          p.category.toLowerCase().includes(searchQuery.toLowerCase());
+    const pCategory = p.category || 'Other';
+    const pName = p.name || '';
+    const pDescription = p.description || '';
+
+    const matchesCategory = selectedCategory === 'All' || 
+      pCategory.trim().toLowerCase() === selectedCategory.trim().toLowerCase();
+      
+    const matchesSearch = pName.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                          pDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          pCategory.toLowerCase().includes(searchQuery.toLowerCase());
+                          
     return matchesCategory && matchesSearch;
   });
 
@@ -1862,7 +1869,12 @@ function App() {
             <p className="font-sans text-sm text-[#2A211D]/60 max-w-md mx-auto">Filter our exclusive hand-tailored items designed for grand celebrations.</p>
             
             {/* Cinematic Search Bar */}
-            <div className="max-w-md w-full mx-auto relative overflow-hidden rounded-full border border-[#D4AF37]/50 shadow-xl h-12 flex items-center mt-6">
+            <div 
+              onClick={() => {
+                document.getElementById('CCS-garment-search')?.focus();
+              }}
+              className="max-w-md w-full mx-auto relative overflow-hidden rounded-full border border-[#D4AF37]/50 shadow-xl h-12 flex items-center mt-6 cursor-text select-text"
+            >
               <video
                 src="/search_background.mp4"
                 autoPlay
@@ -1873,6 +1885,7 @@ function App() {
               />
               <div className="absolute inset-0 bg-black/45 z-10 pointer-events-none" />
               <input
+                id="CCS-garment-search"
                 type="text"
                 placeholder="Search royal garments..."
                 value={searchQuery}
