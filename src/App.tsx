@@ -1929,11 +1929,11 @@ function App() {
                     BC
                   </div>
                   <div>
-                    <div className="font-bold text-[#5C1D24] text-base">Mr. Balkishan Bhagaram Choudhary</div>
+                    <div className="font-bold text-[#5C1D24] text-base">Mr. Bhagaram Khimaram Choudhary</div>
                     <div className="text-xs text-[#2A211D]/60 mb-1">Founder & Lead Curator</div>
-                    <a href="tel:9702516085" className="flex items-center gap-1.5 text-xs text-[#5C1D24] hover:text-[#D4AF37] font-semibold transition-colors">
+                    <a href="tel:9920920792" className="flex items-center gap-1.5 text-xs text-[#5C1D24] hover:text-[#D4AF37] font-semibold transition-colors">
                       <Phone size={13} />
-                      9702516085
+                      9920920792
                     </a>
                   </div>
                 </div>
@@ -1944,12 +1944,12 @@ function App() {
                     BC
                   </div>
                   <div>
-                    <div className="font-bold text-[#5C1D24] text-base">Mr. Bhagaram Khimaram Choudhary</div>
+                    <div className="font-bold text-[#5C1D24] text-base">Mr. Balkishan Bhagaram Choudhary</div>
                     <div className="text-xs text-[#2A211D]/60 mb-1">Co-Founder & General Operations</div>
                     <div className="space-y-1">
-                      <a href="tel:9920920792" className="flex items-center gap-1.5 text-xs text-[#5C1D24] hover:text-[#D4AF37] font-semibold transition-colors">
+                      <a href="tel:9702516085" className="flex items-center gap-1.5 text-xs text-[#5C1D24] hover:text-[#D4AF37] font-semibold transition-colors">
                         <Phone size={13} />
-                        9920920792
+                        9702516085
                       </a>
                       <a href="mailto:choudharyclothstores@gmail.com" className="flex items-center gap-1.5 text-xs text-[#5C1D24] hover:text-[#D4AF37] font-semibold transition-colors">
                         <Mail size={13} />
@@ -2062,8 +2062,8 @@ function App() {
             <div className="space-y-4">
               <h3 className="font-cinzel text-sm font-bold text-[#D4AF37] tracking-widest uppercase">Owners & Details</h3>
               <div className="space-y-2 text-[#FAF6F0]/65">
-                <div>Mr. Balkishan Choudhary: 9702516085</div>
                 <div>Mr. Bhagaram Choudhary: 9920920792</div>
+                <div>Mr. Balkishan Choudhary: 9702516085</div>
                 <div>Email: choudharyclothstores@gmail.com</div>
               </div>
             </div>
