@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Volume2, VolumeX, Sparkles, ChevronRight } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import gsap from 'gsap';
 
 interface OpeningCeremonyProps {
@@ -100,30 +100,7 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
       </div>
 
       {/* 2. Floating Celebration & Control Elements (Top Layer) */}
-      <div className="absolute inset-0 z-20 pointer-events-none flex flex-col items-center justify-between p-6">
-        
-        {/* Top bar controls */}
-        <div className="w-full flex justify-between items-center pointer-events-auto">
-          {/* Mute/Unmute Toggle */}
-          <button
-            onClick={() => setVideoMuted(!videoMuted)}
-            className="p-3 bg-black/40 hover:bg-black/60 text-[#D4AF37] rounded-full border border-[#D4AF37]/40 backdrop-blur-md transition-all duration-300 cursor-pointer shadow-lg hover:scale-105 active:scale-95"
-          >
-            {videoMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-          </button>
-          
-          <div className="flex-1" />
-          
-          {/* Skip Button */}
-          {stage === 'playing' && (
-            <button
-              onClick={fadeAndComplete}
-              className="px-5 py-2.5 bg-black/40 hover:bg-black/60 text-[#FAF6F0] font-sans text-xs tracking-widest uppercase border border-[#D4AF37]/50 rounded-full backdrop-blur-md transition-all duration-300 cursor-pointer flex items-center gap-1.5 hover:scale-105 active:scale-95 shadow-lg"
-            >
-              Skip Ceremony <ChevronRight size={14} />
-            </button>
-          )}
-        </div>
+      <div className="absolute inset-0 z-20 pointer-events-none flex flex-col items-center justify-center p-6">
 
         {/* Center UI (Landing closed screen) */}
         {stage === 'closed' && (
