@@ -18,7 +18,8 @@ import {
   ArrowRight, 
   MessageSquare,
   Key,
-  X
+  X,
+  Search
 } from 'lucide-react';
 
 
@@ -1640,6 +1641,7 @@ function App() {
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
   const [isStylistOpen, setIsStylistOpen] = useState<boolean>(false);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
   // Dynamic products state — always starts from hardcoded PRODUCTS as the source of truth.
   // Owner-added products from localStorage are merged ON TOP of the base catalog.
@@ -1763,9 +1765,13 @@ function App() {
   // Compute categories dynamically from active products to reflect any additions/deletions automatically
   const categories = ['All', ...Array.from(new Set(products.map(p => p.category)))];
   
-  const filteredProducts = selectedCategory === 'All' 
-    ? products 
-    : products.filter(p => p.category.trim().toLowerCase() === selectedCategory.trim().toLowerCase());
+  const filteredProducts = products.filter(p => {
+    const matchesCategory = selectedCategory === 'All' || p.category.trim().toLowerCase() === selectedCategory.trim().toLowerCase();
+    const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                          p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          p.category.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="min-h-screen bg-[#FAF6F0] text-[#2A211D] font-sans selection:bg-[#5C1D24] selection:text-[#FAF6F0] relative">
@@ -1855,6 +1861,27 @@ function App() {
             <div className="w-24 h-0.5 bg-[#D4AF37] mx-auto" />
             <p className="font-sans text-sm text-[#2A211D]/60 max-w-md mx-auto">Filter our exclusive hand-tailored items designed for grand celebrations.</p>
             
+            {/* Cinematic Search Bar */}
+            <div className="max-w-md w-full mx-auto relative overflow-hidden rounded-full border border-[#D4AF37]/50 shadow-xl h-12 flex items-center mt-6 select-none">
+              <video
+                src="/search_background.mp4"
+                autoPlay
+                loop
+                muted={true}
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+              />
+              <div className="absolute inset-0 bg-black/45 z-10 pointer-events-none" />
+              <input
+                type="text"
+                placeholder="Search royal garments..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="relative z-20 w-full h-full bg-transparent pl-6 pr-12 text-[#FAF6F0] placeholder-[#FAF6F0]/65 text-sm outline-none font-sans"
+              />
+              <Search className="absolute right-4 text-[#D4AF37] z-20 pointer-events-none animate-pulse" size={18} />
+            </div>
+
             {/* Category Filter buttons */}
             <div className="flex gap-2 pt-6 overflow-x-auto md:justify-center select-none no-scrollbar pb-3 px-4">
               {categories.map((cat) => (
