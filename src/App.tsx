@@ -1109,16 +1109,16 @@ const PRODUCTS: Product[] = [
     imageUrl: "/kid_boy_4.png"
   },
   {
-    id: "prod-b29",
-    name: "Boys' Premium Angrakha Style Festive Suit",
+    id: "prod-b22",
+    name: "Boys' Handloom Linen Waistcoat Set",
     category: "Boys' Collection (Age 0-18 Years)",
-    price: 2699,
-    rating: 4.7,
-    reviews: 44,
-    description: "Authentic Rajasthani Angrakha style overlap side-tie festive kurta in peach and gold.",
-    textureType: "kurta",
-    colorPalette: { primary: "#FFEDD5", secondary: "#FAF6F0", accent: "#D4AF37" },
-    imageUrl: "/kid_boy_3.png"
+    price: 2199,
+    rating: 4.8,
+    reviews: 42,
+    description: "Premium beige handloom linen waistcoat paired with a soft white linen shirt and comfortable trousers.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#E5E7EB", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/kid_boy_1.png"
   },
   {
     id: "prod-b31",
@@ -1183,16 +1183,16 @@ const PRODUCTS: Product[] = [
     imageUrl: "/kid_girl_2.png"
   },
   {
-    id: "prod-g36",
-    name: "Girls' Lahariya Georgette Lehenga Set",
+    id: "prod-g37",
+    name: "Girls' Chikankari Handloom Cotton Kurti",
     category: "Girls' Collection (Age 0-13 Years)",
-    price: 3199,
-    rating: 4.8,
-    reviews: 66,
-    description: "Flowy multi-colored Rajasthani Lahariya georgette lehenga paired with a gold sequence choli.",
-    textureType: "saree",
-    colorPalette: { primary: "#EC4899", secondary: "#F43F5E", accent: "#D4AF37" },
-    imageUrl: "/kid_girl_2.png"
+    price: 1299,
+    rating: 4.7,
+    reviews: 47,
+    description: "Hand-embroidered pastel green Lucknowi Chikankari cotton kurti, comfortable for warm festive days.",
+    textureType: "kurta",
+    colorPalette: { primary: "#34D399", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/kid_girl_5.png"
   }
 ];
 
@@ -1214,7 +1214,7 @@ function App() {
   // Owner-added products from localStorage are merged ON TOP of the base catalog.
   // This ensures all deployed products are always visible regardless of browser cache.
   const [products, setProducts] = useState<Product[]>(() => {
-    const CATALOG_VERSION = 'v24-20260707';
+    const CATALOG_VERSION = 'v25-20260707';
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
     
     // Always clear stale cache on version mismatch

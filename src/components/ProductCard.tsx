@@ -24,6 +24,7 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToBag }) => {
+  const showCategoryBadge = !(product.category.toLowerCase().includes('boys') || product.category.toLowerCase().includes('girls'));
   const [zoomPos, setZoomPos] = useState({ x: 50, y: 50 });
   const [isHovering, setIsHovering] = useState(false);
   const [showZoom, setShowZoom] = useState(false);
@@ -78,9 +79,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToBag })
           {/* Outer Palace Border Silhouette */}
           <div className="absolute inset-2 border border-[#D4AF37]/35 rounded opacity-45 pointer-events-none" />
           {/* Gold Accent Badge */}
-          <div className="absolute top-3 left-3 bg-[#5C1D24] text-[#FAF6F0] text-[10px] font-semibold tracking-widest px-2.5 py-1 rounded border border-[#D4AF37] shadow">
-            {product.category}
-          </div>
+          {showCategoryBadge && (
+            <div className="absolute top-3 left-3 bg-[#5C1D24] text-[#FAF6F0] text-[10px] font-semibold tracking-widest px-2.5 py-1 rounded border border-[#D4AF37] shadow">
+              {product.category}
+            </div>
+          )}
         </div>
       );
     }
@@ -153,9 +156,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToBag })
         <div className="absolute inset-2 border border-[#D4AF37]/35 rounded opacity-40 pointer-events-none" />
 
         {/* Gold Accent Badge */}
-        <div className="absolute top-3 left-3 bg-[#5C1D24] text-[#FAF6F0] text-[10px] font-semibold tracking-widest px-2.5 py-1 rounded border border-[#D4AF37] shadow">
-          {product.category}
-        </div>
+        {showCategoryBadge && (
+          <div className="absolute top-3 left-3 bg-[#5C1D24] text-[#FAF6F0] text-[10px] font-semibold tracking-widest px-2.5 py-1 rounded border border-[#D4AF37] shadow">
+            {product.category}
+          </div>
+        )}
 
         {/* Center Royal Icon Indicator */}
         <div className="w-12 h-12 rounded-full bg-[#FAF6F0]/25 border border-[#FAF6F0]/40 backdrop-blur-md flex items-center justify-center text-[#FAF6F0]">
