@@ -77,11 +77,11 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
     });
   };
 
-  // Automatically open the inner site after 50 seconds
+  // Automatically open the inner site after 5 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       fadeAndComplete();
-    }, 50000); // 50 seconds
+    }, 5000); // 5 seconds
 
     return () => clearTimeout(timer);
   }, []);
