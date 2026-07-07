@@ -1873,7 +1873,7 @@ function App() {
               onClick={() => {
                 document.getElementById('CCS-garment-search')?.focus();
               }}
-              className="max-w-md w-full mx-auto relative overflow-hidden rounded-full border border-[#D4AF37]/50 shadow-xl h-12 flex items-center mt-6 cursor-text select-text"
+              className="max-w-md w-full mx-auto relative overflow-hidden rounded-full border border-[#D4AF37]/50 shadow-xl h-12 flex items-center mt-6 cursor-text select-text pointer-events-auto z-30"
             >
               <video
                 src="/search_background.mp4"
