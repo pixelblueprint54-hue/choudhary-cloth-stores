@@ -22,26 +22,26 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-[6px] md:top-[12px] z-40 w-full royal-glass border-b border-[#D4AF37]/20 px-6 py-4 transition-all duration-300">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        {/* Left Side: Owner Quick Trust details & Instagram Link */}
-        <div className="hidden lg:flex items-center gap-6 text-xs text-[#5C1D24] font-medium tracking-wide">
-          <div className="flex items-center gap-1.5">
-            <Store size={14} className="text-[#D4AF37]" />
+        {/* Left Side: Owner Quick Trust details & Instagram Link (Visible on all devices) */}
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-1.5 text-[10px] sm:text-xs text-[#5C1D24] font-medium tracking-wide">
+          <div className="flex items-center gap-1">
+            <Store size={12} className="text-[#D4AF37]" />
             <span>ESTD. 1994</span>
           </div>
-          <div className="flex items-center gap-1.5">
-            <Star size={14} className="text-[#D4AF37]" fill="#D4AF37" />
+          <div className="flex items-center gap-1">
+            <Star size={12} className="text-[#D4AF37]" fill="#D4AF37" />
             <span>1 Lakh+ Happy Customers</span>
           </div>
           <a
             href="https://www.instagram.com/choudharyclothstore_ccs?igsh=Zm95YzVjbHBwcTlv"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 hover:text-[#D4AF37] transition-all duration-300 group cursor-pointer"
+            className="flex items-center gap-1 hover:text-[#D4AF37] transition-all duration-300 group cursor-pointer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
+              width="12"
+              height="12"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
