@@ -27,6 +27,22 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
     setMusicEnabled(!videoMuted);
   }, [videoMuted, setMusicEnabled]);
 
+  // Force video autoplay on mount
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(err => {
+        console.log("Auto-play on load blocked, retrying with delay...", err);
+        setTimeout(() => {
+          if (videoRef.current) {
+            videoRef.current.muted = true;
+            videoRef.current.play().catch(e => console.log("Final autoplay attempt failed:", e));
+          }
+        }, 300);
+      });
+    }
+  }, []);
+
   // Generate random petals for the celebration burst
   const [petals, setPetals] = useState<Array<{ id: number; left: number; delay: number; duration: number; size: number; rotate: number }>>([]);
   
@@ -93,6 +109,7 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
           className="w-full h-full object-cover"
           playsInline
           autoPlay
+          muted={videoMuted}
           loop={stage === 'closed'}
           onEnded={handleVideoEnded}
           style={{ filter: 'brightness(0.75) contrast(1.05)' }}
