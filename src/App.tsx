@@ -1862,7 +1862,7 @@ function App() {
             <p className="font-sans text-sm text-[#2A211D]/60 max-w-md mx-auto">Filter our exclusive hand-tailored items designed for grand celebrations.</p>
             
             {/* Cinematic Search Bar */}
-            <div className="max-w-md w-full mx-auto relative overflow-hidden rounded-full border border-[#D4AF37]/50 shadow-xl h-12 flex items-center mt-6 select-none">
+            <div className="max-w-md w-full mx-auto relative overflow-hidden rounded-full border border-[#D4AF37]/50 shadow-xl h-12 flex items-center mt-6">
               <video
                 src="/search_background.mp4"
                 autoPlay
@@ -1877,7 +1877,7 @@ function App() {
                 placeholder="Search royal garments..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="relative z-20 w-full h-full bg-transparent pl-6 pr-12 text-[#FAF6F0] placeholder-[#FAF6F0]/65 text-sm outline-none font-sans"
+                className="relative z-20 w-full h-full bg-transparent pl-6 pr-12 text-[#FAF6F0] placeholder-[#FAF6F0]/65 text-sm outline-none font-sans pointer-events-auto cursor-text"
               />
               <Search className="absolute right-4 text-[#D4AF37] z-20 pointer-events-none animate-pulse" size={18} />
             </div>
@@ -1901,15 +1901,25 @@ function App() {
           </div>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product) => (
-              <ProductCard 
-                key={product.id} 
-                product={product} 
-                onAddToBag={handleAddToBag} 
-              />
-            ))}
-          </div>
+          {filteredProducts.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredProducts.map((product) => (
+                <ProductCard 
+                  key={product.id} 
+                  product={product} 
+                  onAddToBag={handleAddToBag} 
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16 space-y-4 royal-glass rounded-2xl border border-[#D4AF37]/25 p-8 max-w-md mx-auto animate-fade-in bg-black/10">
+              <div className="text-3xl">✨</div>
+              <h3 className="font-cinzel text-[#5C1D24] font-bold tracking-wider text-base uppercase">No Garments Found</h3>
+              <p className="font-sans text-xs text-[#2A211D]/75 max-w-xs mx-auto leading-relaxed">
+                No royal garments match your search for "{searchQuery}". Try typing another garment name, or check another category!
+              </p>
+            </div>
+          )}
         </section>
 
         {/* Owners & Trust Area */}
