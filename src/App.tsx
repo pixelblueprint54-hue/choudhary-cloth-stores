@@ -1775,7 +1775,7 @@ function App() {
           src="/beach_background.mp4"
           autoPlay
           loop
-          muted
+          muted={true}
           playsInline
           className="fixed inset-0 w-full h-full object-cover pointer-events-none"
           style={{ opacity: 0.35, zIndex: 0 }}
