@@ -1457,16 +1457,22 @@ function App() {
                 document.getElementById('CCS-garment-search')?.focus();
               }}
               className="max-w-md w-full mx-auto relative overflow-hidden rounded-full border border-[#D4AF37]/50 shadow-xl h-12 flex items-center mt-6 cursor-text select-text pointer-events-auto z-30"
+              style={{
+                backgroundImage: "url('/cinematic_palace_poster.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+              }}
             >
               <video
-                src="/search_background.mp4"
+                src="/opening_gate.mp4"
+                poster="/cinematic_palace_poster.png"
                 autoPlay
                 loop
                 muted={true}
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
               />
-              <div className="absolute inset-0 bg-black/45 z-10 pointer-events-none" />
+              <div className="absolute inset-0 bg-black/55 z-10 pointer-events-none" />
               <input
                 id="CCS-garment-search"
                 type="text"
