@@ -134,6 +134,15 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
             </button>
           </div>
         )}
+
+        {/* Simple Welcome Text Overlay (Visible during video playback) */}
+        {stage === 'playing' && (
+          <div className="text-center pointer-events-none animate-fade-in duration-1000 select-none">
+            <h1 className="font-cinzel text-3xl sm:text-5xl text-[#FAF6F0] tracking-[0.2em] font-bold drop-shadow-lg uppercase leading-normal">
+              Welcome to <br className="sm:hidden" /> Choudhary Clothes
+            </h1>
+          </div>
+        )}
       </div>
 
       {/* Injecting keyframe styles for custom animations */}
