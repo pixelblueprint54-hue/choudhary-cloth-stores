@@ -1252,6 +1252,66 @@ const PRODUCTS: Product[] = [
     textureType: "kurta",
     colorPalette: { primary: "#EF4444", secondary: "#1E3A8A", accent: "#FAF6F0" }
   },
+  {
+    id: "prod-b17",
+    name: "Boys' Jaipur Indigo Block Print Kurta",
+    category: "Boys' Collection (Age 0-18 Years)",
+    price: 1399,
+    rating: 4.8,
+    reviews: 55,
+    description: "Elegant indigo blue hand-block printed cotton kurta, perfect for festive events and pujas.",
+    textureType: "kurta",
+    colorPalette: { primary: "#1E3A8A", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/kid_boy_1.png"
+  },
+  {
+    id: "prod-b18",
+    name: "Boys' Royal Gota Work Sherwani Set",
+    category: "Boys' Collection (Age 0-18 Years)",
+    price: 3299,
+    rating: 4.9,
+    reviews: 42,
+    description: "Cream and gold premium sherwani set featuring detailed Gota Patti embroidery on the collar.",
+    textureType: "sherwani",
+    colorPalette: { primary: "#FAF6F0", secondary: "#D4AF37", accent: "#5C1D24" },
+    imageUrl: "/kid_boy_4.png"
+  },
+  {
+    id: "prod-b19",
+    name: "Boys' Mandarin Collar Festive Nehru Jacket Set",
+    category: "Boys' Collection (Age 0-18 Years)",
+    price: 2499,
+    rating: 4.7,
+    reviews: 38,
+    description: "Stylish mustard yellow Nehru jacket paired with a white cotton kurta and churidar pants.",
+    textureType: "bandhgala",
+    colorPalette: { primary: "#D97706", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/kid_boy_3.png"
+  },
+  {
+    id: "prod-b20",
+    name: "Boys' Pathani Style Cotton Suit",
+    category: "Boys' Collection (Age 0-18 Years)",
+    price: 1899,
+    rating: 4.8,
+    reviews: 67,
+    description: "Traditional dark olive green Pathani suit with button flaps and structured shoulders.",
+    textureType: "kurta",
+    colorPalette: { primary: "#3F6212", secondary: "#FAF6F0", accent: "#1E293B" },
+    imageUrl: "/kid_boy_2.png"
+  },
+  {
+    id: "prod-b21",
+    name: "Boys' Bandhani Print Casual Play Kurta",
+    category: "Boys' Collection (Age 0-18 Years)",
+    price: 999,
+    rating: 4.6,
+    reviews: 50,
+    description: "Breezy cotton casual kurta featuring all-over Rajasthani Bandhani prints.",
+    textureType: "kurta",
+    colorPalette: { primary: "#EF4444", secondary: "#FAF6F0", accent: "#EAB308" },
+    imageUrl: "/kid_boy_5.png"
+  },
 
   // --- GIRLS' COLLECTION (AGE 0-13 YEARS) ---
   {
@@ -1445,6 +1505,126 @@ const PRODUCTS: Product[] = [
     textureType: "kurta",
     colorPalette: { primary: "#D7C49E", secondary: "#FAF6F0", accent: "#A18262" },
     imageUrl: "/kid_girl_5.png"
+  },
+  {
+    id: "prod-g18",
+    name: "Girls' Gota Patti Embroidered Lehenga Choli",
+    category: "Girls' Collection (Age 0-13 Years)",
+    price: 2799,
+    rating: 4.9,
+    reviews: 88,
+    description: "Festive pink and gold lehenga choli set with fine Gota work and a soft net dupatta.",
+    textureType: "saree",
+    colorPalette: { primary: "#EC4899", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/kid_girl_4.png"
+  },
+  {
+    id: "prod-g19",
+    name: "Girls' Royal Anarkali Frock Dress",
+    category: "Girls' Collection (Age 0-13 Years)",
+    price: 2199,
+    rating: 4.8,
+    reviews: 95,
+    description: "Elegant flared Anarkali style suit set in rich royal blue, decorated with silver lace trims.",
+    textureType: "sherwani",
+    colorPalette: { primary: "#1E3A8A", secondary: "#FAF6F0", accent: "#E2E8F0" },
+    imageUrl: "/kid_girl_2.png"
+  },
+  {
+    id: "prod-g20",
+    name: "Girls' Jaipuri Bandhej Tiered Dress",
+    category: "Girls' Collection (Age 0-13 Years)",
+    price: 1599,
+    rating: 4.7,
+    reviews: 42,
+    description: "Multi-colored tiered cotton dress with beautiful bandhej prints, perfect for summer celebrations.",
+    textureType: "kurta",
+    colorPalette: { primary: "#F59E0B", secondary: "#EF4444", accent: "#FAF6F0" },
+    imageUrl: "/kid_girl_1.png"
+  },
+  {
+    id: "prod-g21",
+    name: "Girls' Embroidered Silk Salwar Suit Set",
+    category: "Girls' Collection (Age 0-13 Years)",
+    price: 2399,
+    rating: 4.9,
+    reviews: 73,
+    description: "Rich magenta silk blend kurta paired with a matching salwar and floral print organza dupatta.",
+    textureType: "kurta",
+    colorPalette: { primary: "#BE185D", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/kid_girl_3.png"
+  },
+  {
+    id: "prod-g22",
+    name: "Girls' Mirror Work Festive Kurti Set",
+    category: "Girls' Collection (Age 0-13 Years)",
+    price: 1799,
+    rating: 4.8,
+    reviews: 56,
+    description: "Yellow cotton-silk kurti featuring elaborate mirror embroidery around the neck and matching salwars.",
+    textureType: "kurta",
+    colorPalette: { primary: "#EAB308", secondary: "#FAF6F0", accent: "#CA8A04" },
+    imageUrl: "/kid_girl_5.png"
+  },
+  {
+    id: "prod-g23",
+    name: "Girls' Cotton Block Print Festive Lehenga",
+    category: "Girls' Collection (Age 0-13 Years)",
+    price: 2499,
+    rating: 4.7,
+    reviews: 62,
+    description: "Comfortable and breezy block-printed cotton lehenga set, perfect for all-day festive wear.",
+    textureType: "saree",
+    colorPalette: { primary: "#0D9488", secondary: "#FAF6F0", accent: "#F472B6" },
+    imageUrl: "/kid_girl_4.png"
+  },
+  {
+    id: "prod-g24",
+    name: "Girls' Embroidered Palazzo Kurti Set",
+    category: "Girls' Collection (Age 0-13 Years)",
+    price: 1999,
+    rating: 4.8,
+    reviews: 49,
+    description: "Modern sleeveless short kurti with heavy thread embroidery paired with flared white palazzos.",
+    textureType: "kurta",
+    colorPalette: { primary: "#FAF6F0", secondary: "#4F46E5", accent: "#D4AF37" },
+    imageUrl: "/kid_girl_3.png"
+  },
+  {
+    id: "prod-g25",
+    name: "Girls' Peplum Style Traditional Top with Skirt",
+    category: "Girls' Collection (Age 0-13 Years)",
+    price: 2299,
+    rating: 4.8,
+    reviews: 37,
+    description: "Peach peplum-style embroidered top with a matching flared brocade silk skirt.",
+    textureType: "sherwani",
+    colorPalette: { primary: "#FDBA74", secondary: "#D4AF37", accent: "#FAF6F0" },
+    imageUrl: "/kid_girl_1.png"
+  },
+  {
+    id: "prod-g26",
+    name: "Girls' Banarasi Brocade Pavadav Set",
+    category: "Girls' Collection (Age 0-13 Years)",
+    price: 2899,
+    rating: 5.0,
+    reviews: 29,
+    description: "Traditional South-Indian style silk Pavadai lehenga set with a rich gold brocade border.",
+    textureType: "saree",
+    colorPalette: { primary: "#B91C1C", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/kid_girl_2.png"
+  },
+  {
+    id: "prod-g27",
+    name: "Girls' Rajasthani Bandhani Silk Frock",
+    category: "Girls' Collection (Age 0-13 Years)",
+    price: 1699,
+    rating: 4.9,
+    reviews: 80,
+    description: "Classic silk frock featuring tie-and-dye Rajasthani Bandhani pattern and gold borders.",
+    textureType: "kurta",
+    colorPalette: { primary: "#EA580C", secondary: "#FAF6F0", accent: "#D4AF37" },
+    imageUrl: "/kid_girl_5.png"
   }
 ];
 
@@ -1465,7 +1645,7 @@ function App() {
   // Owner-added products from localStorage are merged ON TOP of the base catalog.
   // This ensures all deployed products are always visible regardless of browser cache.
   const [products, setProducts] = useState<Product[]>(() => {
-    const CATALOG_VERSION = 'v21-20260702';
+    const CATALOG_VERSION = 'v22-20260707';
     const savedVer = localStorage.getItem('CCS_CATALOG_VERSION');
     
     // Always clear stale cache on version mismatch
@@ -1628,7 +1808,7 @@ function App() {
             </div>
             
             <h1 className="font-rozha text-5xl md:text-7xl text-[#5C1D24] tracking-wide leading-tight">
-              Rajasthani Palace Boutique
+              Palace Boutique
             </h1>
             
             <p className="font-sans text-base md:text-lg text-[#2A211D]/80 max-w-2xl mx-auto leading-relaxed">
