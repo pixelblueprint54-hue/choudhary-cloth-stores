@@ -308,16 +308,16 @@ export const RangoliShowcase: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center justify-center py-6 select-none">
-      {/* Left Column: Cinematic Gold Particle Loop Video */}
+      {/* Left Column: Cinematic Palace Loop Video */}
       <div className="hidden lg:block lg:col-span-3 h-[380px] rounded-2xl border border-[#D4AF37]/35 overflow-hidden shadow-2xl relative bg-black">
         <video
           autoPlay
           loop
-          muted
+          muted={true}
           playsInline
           className="w-full h-full object-cover opacity-75"
         >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-slow-motion-of-a-golden-particle-flow-42240-large.mp4" type="video/mp4" />
+          <source src="/opening_gate.mp4" type="video/mp4" />
         </video>
         {/* Decorative inner gold border frame */}
         <div className="absolute inset-2 border border-[#D4AF37]/25 rounded-lg pointer-events-none" />
@@ -335,16 +335,16 @@ export const RangoliShowcase: React.FC = () => {
         </div>
       </div>
 
-      {/* Right Column: Cinematic Weaving/Embroidery Video */}
+      {/* Right Column: Cinematic Palace Loop Video */}
       <div className="hidden lg:block lg:col-span-3 h-[380px] rounded-2xl border border-[#D4AF37]/35 overflow-hidden shadow-2xl relative bg-black">
         <video
           autoPlay
           loop
-          muted
+          muted={true}
           playsInline
           className="w-full h-full object-cover opacity-75"
         >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-sewing-machine-needle-stitching-a-fabric-41712-large.mp4" type="video/mp4" />
+          <source src="/opening_gate.mp4" type="video/mp4" />
         </video>
         {/* Decorative inner gold border frame */}
         <div className="absolute inset-2 border border-[#D4AF37]/25 rounded-lg pointer-events-none" />
