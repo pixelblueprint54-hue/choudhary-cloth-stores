@@ -1393,7 +1393,21 @@ function App() {
         />
 
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-16 md:py-24 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.06)_0%,transparent_70%)] palace-arch-bg">
+        <section className="relative overflow-hidden py-16 md:py-24 palace-arch-bg">
+          {/* Subtle loop video of the Rajasthani palace */}
+          <div className="absolute inset-0 z-0 overflow-hidden opacity-[0.09]">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+              poster="/cinematic_palace_poster.png"
+            >
+              <source src="/opening_gate.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-b from-[#150709]/10 via-transparent to-transparent pointer-events-none" />
+          </div>
           <div className="max-w-7xl mx-auto px-6 text-center space-y-6 relative z-10">
             <div className="inline-flex items-center gap-2 bg-[#F3ECE0] px-4 py-1.5 rounded-full border border-[#D4AF37]/35 text-[#5C1D24] text-xs font-semibold tracking-wider uppercase font-sans">
               <Sparkles size={14} className="text-[#D4AF37]" />

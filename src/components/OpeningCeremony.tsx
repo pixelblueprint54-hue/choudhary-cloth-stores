@@ -90,12 +90,18 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
     <div 
       ref={containerRef}
       className="fixed inset-0 z-50 overflow-hidden flex items-center justify-center bg-[#150709] select-none"
+      style={{
+        backgroundImage: "url('/cinematic_palace_poster.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}
     >
       {/* 1. Cinematic Background Video Layer (Autoplays muted on land, loops on closed stage) */}
       <div className="absolute inset-0 z-0">
         <video
           ref={videoRef}
           src="/opening_gate.mp4"
+          poster="/cinematic_palace_poster.png"
           className="w-full h-full object-cover"
           playsInline
           autoPlay
