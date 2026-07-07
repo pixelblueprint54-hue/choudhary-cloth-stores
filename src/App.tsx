@@ -1889,7 +1889,13 @@ function App() {
                 type="text"
                 placeholder="Search royal garments..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  if (e.target.value.trim() !== '') {
+                    setSelectedCategory('All');
+                  }
+                }}
+                autoComplete="off"
                 className="relative z-20 w-full h-full bg-transparent pl-6 pr-12 text-[#FAF6F0] placeholder-[#FAF6F0]/65 text-sm outline-none font-sans pointer-events-auto cursor-text"
               />
               <Search className="absolute right-4 text-[#D4AF37] z-20 pointer-events-none animate-pulse" size={18} />
