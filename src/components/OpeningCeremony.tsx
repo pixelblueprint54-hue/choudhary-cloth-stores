@@ -134,21 +134,6 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
             </button>
           </div>
         )}
-
-        {/* Celebratory Welcome Banner Overlay (Visible during video playback) */}
-        {stage === 'playing' && (
-          <div className="flex flex-col items-center pointer-events-none mt-12 animate-fade-in duration-1000">
-            <div className="royal-banner bg-[#5C1D24]/85 border-y-2 border-[#D4AF37] px-8 py-4 backdrop-blur-xs text-center shadow-2xl rounded-sm">
-              <div className="text-[10px] sm:text-xs tracking-[0.35em] text-[#D4AF37] uppercase font-cinzel font-semibold mb-1">
-                Welcome to Choudhary Clothes
-              </div>
-              <h1 className="font-cinzel text-lg sm:text-2xl text-[#FAF6F0] tracking-[0.2em] font-bold drop-shadow-md">
-                THE PRIDE OF RAJASTHAN
-              </h1>
-            </div>
-          </div>
-        )}
-
       </div>
 
       {/* Injecting keyframe styles for custom animations */}
