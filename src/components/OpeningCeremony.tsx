@@ -118,13 +118,51 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
 
         {/* Center UI (Landing closed screen) */}
         {stage === 'closed' && (
-          <div className="flex flex-col items-center text-center max-w-xs pointer-events-auto animate-fade-in bg-black/50 p-4 rounded-xl border border-[#D4AF37]/25 backdrop-blur-md shadow-2xl">
-            <button
-              onClick={handleOpenGates}
-              className="px-8 py-4 bg-gradient-to-r from-[#D4AF37] to-[#C5A059] hover:from-[#C5A059] hover:to-[#B6914A] text-[#2A1115] font-semibold text-sm sm:text-base tracking-[0.2em] uppercase transition-all duration-300 shadow-2xl flex items-center gap-3 border border-[#F7E7C4] rounded-md font-sans hover:scale-103 active:scale-97 cursor-pointer w-full text-center whitespace-nowrap"
-            >
-              Open Royal Gates
-            </button>
+          <div className="flex flex-col items-center justify-center space-y-8 pointer-events-auto select-none max-w-lg px-6">
+            {/* Elegant Royal Header */}
+            <div className="text-center space-y-2 animate-fade-in">
+              <h2 className="font-cinzel text-xl sm:text-2xl text-[#FAF6F0] tracking-[0.35em] uppercase font-bold drop-shadow-[0_2px_10px_rgba(212,175,55,0.3)]">
+                Choudhary Cloth Stores
+              </h2>
+              <p className="font-sans text-[10px] tracking-[0.4em] text-[#D4AF37] uppercase font-bold">
+                Heritage of Rajasthan • Estd 1994
+              </p>
+            </div>
+
+            {/* Glowing Medallion Button Container */}
+            <div className="relative flex items-center justify-center">
+              {/* Flanking Diya Left */}
+              <div className="absolute -left-20 hidden sm:flex flex-col items-center">
+                <div className="w-8 h-4 bg-[#D4AF37]/80 rounded-b-full relative border-t-2 border-[#FAF6F0]/50 shadow-lg">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-3.5 h-6 bg-amber-400 rounded-full animate-pulse blur-[1px] shadow-[0_0_15px_#F5B041]" />
+                </div>
+              </div>
+
+              {/* Main Medallion Button */}
+              <button
+                onClick={handleOpenGates}
+                className="px-10 py-5 bg-gradient-to-b from-[#5C1D24] to-[#3A0C11] text-[#D4AF37] hover:text-[#FAF6F0] font-cinzel text-sm sm:text-base tracking-[0.25em] uppercase font-bold transition-all duration-500 rounded-full cursor-pointer hover:scale-105 active:scale-98 shadow-[0_0_25px_rgba(212,175,55,0.25)] border-2 border-[#D4AF37] hover:border-[#FAF6F0] relative overflow-hidden group select-none"
+                style={{
+                  animation: 'gold-pulse 2s infinite'
+                }}
+              >
+                {/* Shiny glint effect */}
+                <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-150%] group-hover:translate-x-[250%] transition-transform duration-1000 ease-out" />
+                
+                Open Royal Gates
+              </button>
+
+              {/* Flanking Diya Right */}
+              <div className="absolute -right-20 hidden sm:flex flex-col items-center">
+                <div className="w-8 h-4 bg-[#D4AF37]/80 rounded-b-full relative border-t-2 border-[#FAF6F0]/50 shadow-lg">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-3.5 h-6 bg-amber-400 rounded-full animate-pulse blur-[1px] shadow-[0_0_15px_#F5B041]" />
+                </div>
+              </div>
+            </div>
+            
+            <p className="font-sans text-[9px] tracking-[0.25em] text-[#FAF6F0]/50 uppercase text-center pt-2">
+              Click to enter the digital palace showcase
+            </p>
           </div>
         )}
 
@@ -147,6 +185,11 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
         @keyframes banner-slide {
           from { transform: translateY(-80px); opacity: 0; }
           to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes gold-pulse {
+          0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.45); }
+          70% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
         }
       `}</style>
     </div>
