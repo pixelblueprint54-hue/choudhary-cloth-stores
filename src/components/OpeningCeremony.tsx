@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import { Sparkles } from 'lucide-react';
 import gsap from 'gsap';
 
 interface OpeningCeremonyProps {
@@ -113,22 +112,10 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
 
         {/* Center UI (Landing closed screen) */}
         {stage === 'closed' && (
-          <div className="flex flex-col items-center text-center max-w-md pointer-events-auto animate-fade-in bg-black/50 p-8 rounded-2xl border border-[#D4AF37]/25 backdrop-blur-md shadow-2xl">
-            <div className="w-16 h-16 rounded-full border border-[#D4AF37] flex items-center justify-center bg-[#4A141A]/95 shadow-xl mb-5 text-[#D4AF37] animate-pulse">
-              <Sparkles size={28} className="text-[#D4AF37]" />
-            </div>
-            
-            <h2 className="font-cinzel text-xl sm:text-2xl text-[#FAF6F0] mb-2 tracking-[0.2em] font-bold">
-              WELCOME TO THE PALACE
-            </h2>
-            
-            <p className="font-sans text-[#F7E7C4] mb-6 text-xs sm:text-sm tracking-wider uppercase opacity-85 leading-relaxed">
-              Experience the royal heritage and cinematic splendor of Rajasthan
-            </p>
-
+          <div className="flex flex-col items-center text-center max-w-xs pointer-events-auto animate-fade-in bg-black/50 p-4 rounded-xl border border-[#D4AF37]/25 backdrop-blur-md shadow-2xl">
             <button
               onClick={handleOpenGates}
-              className="px-8 py-4 bg-gradient-to-r from-[#D4AF37] to-[#C5A059] hover:from-[#C5A059] hover:to-[#B6914A] text-[#2A1115] font-semibold text-sm sm:text-base tracking-[0.2em] uppercase transition-all duration-300 shadow-2xl flex items-center gap-3 border border-[#F7E7C4] rounded-md font-sans hover:scale-103 active:scale-97 cursor-pointer"
+              className="px-8 py-4 bg-gradient-to-r from-[#D4AF37] to-[#C5A059] hover:from-[#C5A059] hover:to-[#B6914A] text-[#2A1115] font-semibold text-sm sm:text-base tracking-[0.2em] uppercase transition-all duration-300 shadow-2xl flex items-center gap-3 border border-[#F7E7C4] rounded-md font-sans hover:scale-103 active:scale-97 cursor-pointer w-full text-center whitespace-nowrap"
             >
               Open Royal Gates
             </button>
