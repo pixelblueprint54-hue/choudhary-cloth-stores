@@ -17,7 +17,6 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
   const [videoMuted, setVideoMuted] = useState<boolean>(!musicEnabled);
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const petalsRef = useRef<HTMLDivElement>(null);
 
   // Sync video mute status with state
   useEffect(() => {
@@ -42,23 +41,6 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
       });
     }
   }, []);
-
-  // Generate random petals for the celebration burst
-  const [petals, setPetals] = useState<Array<{ id: number; left: number; delay: number; duration: number; size: number; rotate: number }>>([]);
-  
-  useEffect(() => {
-    if (stage === 'playing') {
-      const generated = Array.from({ length: 40 }).map((_, i) => ({
-        id: i,
-        left: Math.random() * 100, // percentage
-        delay: Math.random() * 4, // seconds
-        duration: 4 + Math.random() * 4, // seconds
-        size: 10 + Math.random() * 15, // pixels
-        rotate: Math.random() * 360, // degrees
-      }));
-      setPetals(generated);
-    }
-  }, [stage]);
 
   const handleOpenGates = () => {
     setStage('playing');
@@ -181,85 +163,10 @@ export const OpeningCeremony: React.FC<OpeningCeremonyProps> = ({
           </div>
         )}
 
-        {/* Diyas (Candles) flickering at the bottom of the screen during video */}
-        {stage === 'playing' && (
-          <div className="w-full flex justify-around items-end h-16 px-4">
-            <div className="diya animate-pulse opacity-90"><div className="flame"></div></div>
-            <div className="diya animate-pulse opacity-75 hidden md:block"><div className="flame"></div></div>
-            <div className="diya animate-pulse opacity-90"><div className="flame"></div></div>
-            <div className="diya animate-pulse opacity-75 hidden md:block"><div className="flame"></div></div>
-            <div className="diya animate-pulse opacity-90"><div className="flame"></div></div>
-          </div>
-        )}
       </div>
-
-      {/* 3. Flower Petals Shower Overlay */}
-      {stage === 'playing' && (
-        <div ref={petalsRef} className="absolute inset-0 pointer-events-none z-30 overflow-hidden">
-          {petals.map((petal) => (
-            <div
-              key={petal.id}
-              className="absolute bg-gradient-to-br from-red-500/80 to-rose-600/75 rounded-full"
-              style={{
-                top: '-20px',
-                left: `${petal.left}%`,
-                width: `${petal.size}px`,
-                height: `${petal.size * 0.8}px`,
-                transform: `rotate(${petal.rotate}deg)`,
-                animation: `fall ${petal.duration}s linear infinite`,
-                animationDelay: `${petal.delay}s`,
-                boxShadow: '0 2px 5px rgba(0,0,0,0.15)',
-              }}
-            />
-          ))}
-        </div>
-      )}
 
       {/* Injecting keyframe styles for custom animations */}
       <style>{`
-        @keyframes fall {
-          0% {
-            top: -20px;
-            transform: translateX(0) rotate(0deg);
-            opacity: 0;
-          }
-          10% {
-            opacity: 1;
-          }
-          90% {
-            opacity: 0.9;
-          }
-          100% {
-            top: 105vh;
-            transform: translateX(100px) rotate(360deg);
-            opacity: 0;
-          }
-        }
-        .diya {
-          width: 32px;
-          height: 16px;
-          background: #B45309;
-          border-bottom-left-radius: 20px;
-          border-bottom-right-radius: 20px;
-          position: relative;
-          box-shadow: 0 4px 10px rgba(251, 191, 36, 0.4);
-        }
-        .flame {
-          width: 12px;
-          height: 24px;
-          background: linear-gradient(to top, #EF4444, #F59E0B, #FBBF24);
-          border-radius: 50% 50% 20% 20%;
-          position: absolute;
-          bottom: 12px;
-          left: 50%;
-          transform: translateX(-50%);
-          animation: flicker 0.15s ease-in-out infinite alternate;
-          box-shadow: 0 0 15px #F59E0B;
-        }
-        @keyframes flicker {
-          0% { transform: translateX(-50%) scale(0.9) rotate(-1deg); }
-          100% { transform: translateX(-50%) scale(1.1) rotate(1deg); }
-        }
         .royal-banner {
           box-shadow: 0 10px 30px rgba(0,0,0,0.5);
           animation: banner-slide 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
