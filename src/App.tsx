@@ -1999,12 +1999,8 @@ function App() {
               
               <div className="space-y-2 text-xs font-sans text-[#2A211D]/70">
                 <div className="flex justify-between border-b border-[#D4AF37]/15 pb-2">
-                  <span>Monday - Saturday:</span>
-                  <span className="font-semibold text-[#5C1D24]">10:00 AM - 9:00 PM</span>
-                </div>
-                <div className="flex justify-between border-b border-[#D4AF37]/15 pb-2">
-                  <span>Sunday:</span>
-                  <span className="font-semibold text-[#5C1D24]">11:00 AM - 7:00 PM</span>
+                  <span>Monday - Sunday:</span>
+                  <span className="font-semibold text-[#5C1D24]">10:00 AM - 10:00 PM</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Support Line:</span>
