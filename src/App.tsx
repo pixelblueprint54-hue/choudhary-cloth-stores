@@ -1349,22 +1349,17 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#FAF6F0] text-[#2A211D] font-sans selection:bg-[#5C1D24] selection:text-[#FAF6F0] relative">
-      {/* Full Page Palace Background Video */}
+      {/* Full Page Beach Background Video */}
       {isEntered && (
-        <div className="fixed inset-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }}>
-          <video
-            src="/opening_gate.mp4"
-            poster="/cinematic_palace_poster.png"
-            autoPlay
-            loop
-            muted={true}
-            playsInline
-            className="w-full h-full object-cover"
-            style={{ opacity: 0.65, filter: 'contrast(1.02) brightness(1.02)' }}
-          />
-          {/* Subtle cream overlay and soft blur to maintain absolute text legibility and image contrast */}
-          <div className="absolute inset-0 bg-[#FAF6F0]/75 backdrop-blur-[1.5px]" />
-        </div>
+        <video
+          src="/beach_background.mp4"
+          autoPlay
+          loop
+          muted={true}
+          playsInline
+          className="fixed inset-0 w-full h-full object-cover pointer-events-none"
+          style={{ opacity: 0.35, zIndex: 0 }}
+        />
       )}
 
       {/* Royal Viewport Frame Border */}
@@ -1398,9 +1393,9 @@ function App() {
         />
 
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-16 md:py-24 palace-arch-bg">
-          {/* Subtle loop video of the Rajasthani palace */}
-          <div className="absolute inset-0 z-0 overflow-hidden opacity-[0.09]">
+        <section className="relative overflow-hidden py-20 md:py-28 palace-arch-bg min-h-[420px] flex items-center justify-center">
+          {/* Loop video of the Rajasthani palace (Bright and visible, but doesn't affect readability) */}
+          <div className="absolute inset-0 z-0 overflow-hidden">
             <video
               autoPlay
               loop
@@ -1408,10 +1403,12 @@ function App() {
               playsInline
               className="w-full h-full object-cover"
               poster="/cinematic_palace_poster.png"
+              style={{ opacity: 0.8, filter: 'contrast(1.05) brightness(0.95)' }}
             >
               <source src="/opening_gate.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-b from-[#150709]/10 via-transparent to-transparent pointer-events-none" />
+            {/* Soft tint overlay so text on top is highly readable and unaffected */}
+            <div className="absolute inset-0 bg-[#FAF6F0]/80 backdrop-blur-[1.5px]" />
           </div>
           <div className="max-w-7xl mx-auto px-6 text-center space-y-6 relative z-10">
             <div className="inline-flex items-center gap-2 bg-[#F3ECE0] px-4 py-1.5 rounded-full border border-[#D4AF37]/35 text-[#5C1D24] text-xs font-semibold tracking-wider uppercase font-sans">

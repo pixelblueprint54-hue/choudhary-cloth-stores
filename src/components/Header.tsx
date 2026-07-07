@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-[6px] md:top-[12px] z-40 w-full royal-glass border-b border-[#D4AF37]/20 px-6 py-4 transition-all duration-300">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        {/* Left Side: Owner Quick Trust details */}
+        {/* Left Side: Owner Quick Trust details & Instagram Link */}
         <div className="hidden lg:flex items-center gap-6 text-xs text-[#5C1D24] font-medium tracking-wide">
           <div className="flex items-center gap-1.5">
             <Store size={14} className="text-[#D4AF37]" />
@@ -32,6 +32,30 @@ export const Header: React.FC<HeaderProps> = ({
             <Star size={14} className="text-[#D4AF37]" fill="#D4AF37" />
             <span>1 Lakh+ Happy Customers</span>
           </div>
+          <a
+            href="https://www.instagram.com/choudharyclothstore_ccs?igsh=Zm95YzVjbHBwcTlv"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 hover:text-[#D4AF37] transition-all duration-300 group cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-[#D4AF37] group-hover:scale-110 transition-transform"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+            <span className="underline decoration-[#D4AF37]/30 group-hover:decoration-[#D4AF37]">Instagram</span>
+          </a>
         </div>
 
         {/* Center: Main Logo & Brand */}
