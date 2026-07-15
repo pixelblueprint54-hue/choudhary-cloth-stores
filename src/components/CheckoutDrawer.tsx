@@ -25,8 +25,6 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
   onClear,
 }) => {
   const [checkoutStep, setCheckoutStep] = useState<'cart' | 'receipt'>('cart');
-  const [customerName, setCustomerName] = useState('');
-  const [customerPhone, setCustomerPhone] = useState('');
   const [address, setAddress] = useState('');
   const [receiptNo, setReceiptNo] = useState('');
   const [receiptDate, setReceiptDate] = useState('');
@@ -42,8 +40,6 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
   const handleOrderDone = () => {
     onClear();
     setCheckoutStep('cart');
-    setCustomerName('');
-    setCustomerPhone('');
     setAddress('');
     onClose();
   };
@@ -52,8 +48,6 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
     const itemsText = cart.map(item => `- ${item.product.name} (x${item.quantity})`).join('\n');
     const msg = `*👑 ROYAL ORDER - CHOUDHARY CLOTH STORES 👑*\n` +
                 `----------------------------------------\n` +
-                `*Customer:* ${(customerName || 'Valued Customer').toUpperCase()}\n` +
-                `*Contact:* ${customerPhone || 'N/A'}\n` +
                 `*Address:* ${address || 'Goregaon Store Pick-up'}\n` +
                 `----------------------------------------\n` +
                 `*Items Ordered:*\n${itemsText}\n` +
@@ -167,30 +161,7 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
                 <div className="p-5 border-t border-[#D4AF37]/20 bg-[#F3ECE0]/50 space-y-4">
                   {/* Customer Form */}
                   <form onSubmit={handleCheckout} className="space-y-2.5 pt-2">
-                    <div>
-                      <label className="block text-[10px] uppercase tracking-widest text-[#5C1D24] font-bold mb-1 font-sans">
-                        Full Name
-                      </label>
-                      <input
-                        type="text"
-                        value={customerName}
-                        onChange={(e) => setCustomerName(e.target.value)}
-                        placeholder="e.g. Ishit Jain"
-                        className="w-full p-2 text-sm bg-[#FAF6F0] border border-[#D4AF37]/30 rounded focus:outline-none focus:border-[#5C1D24] font-sans"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-[10px] uppercase tracking-widest text-[#5C1D24] font-bold mb-1 font-sans">
-                        Contact Number
-                      </label>
-                      <input
-                        type="tel"
-                        value={customerPhone}
-                        onChange={(e) => setCustomerPhone(e.target.value.replace(/\D/g, '').substring(0, 10))}
-                        placeholder="e.g. 9876543210"
-                        className="w-full p-2 text-sm bg-[#FAF6F0] border border-[#D4AF37]/30 rounded focus:outline-none focus:border-[#5C1D24] font-sans"
-                      />
-                    </div>
+
 
                     <button
                       type="submit"
@@ -227,14 +198,7 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
                     <span className="text-[#2A211D]/60">Receipt No:</span>
                     <span className="font-medium">{receiptNo}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-[#2A211D]/60">Customer Name:</span>
-                    <span className="font-medium uppercase">{customerName || 'Valued Customer'}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-[#2A211D]/60">Contact No:</span>
-                    <span className="font-medium">{customerPhone || 'N/A'}</span>
-                  </div>
+
                 </div>
 
                 {/* Items grid */}
