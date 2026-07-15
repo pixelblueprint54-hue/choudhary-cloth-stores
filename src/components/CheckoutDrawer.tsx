@@ -34,7 +34,6 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
 
   const handleCheckout = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!customerName || !customerPhone) return;
     setReceiptNo(`CCS-${Math.floor(100000 + Math.random() * 900000)}`);
     setReceiptDate(new Date().toLocaleDateString('en-IN'));
     setCheckoutStep('receipt');
@@ -53,8 +52,8 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
     const itemsText = cart.map(item => `- ${item.product.name} (x${item.quantity})`).join('\n');
     const msg = `*👑 ROYAL ORDER - CHOUDHARY CLOTH STORES 👑*\n` +
                 `----------------------------------------\n` +
-                `*Customer:* ${customerName.toUpperCase()}\n` +
-                `*Contact:* ${customerPhone}\n` +
+                `*Customer:* ${(customerName || 'Valued Customer').toUpperCase()}\n` +
+                `*Contact:* ${customerPhone || 'N/A'}\n` +
                 `*Address:* ${address || 'Goregaon Store Pick-up'}\n` +
                 `----------------------------------------\n` +
                 `*Items Ordered:*\n${itemsText}\n` +
@@ -170,11 +169,10 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
                   <form onSubmit={handleCheckout} className="space-y-2.5 pt-2">
                     <div>
                       <label className="block text-[10px] uppercase tracking-widest text-[#5C1D24] font-bold mb-1 font-sans">
-                        Full Name *
+                        Full Name
                       </label>
                       <input
                         type="text"
-                        required
                         value={customerName}
                         onChange={(e) => setCustomerName(e.target.value)}
                         placeholder="e.g. Ishit Jain"
@@ -183,13 +181,10 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
                     </div>
                     <div>
                       <label className="block text-[10px] uppercase tracking-widest text-[#5C1D24] font-bold mb-1 font-sans">
-                        Contact Number *
+                        Contact Number
                       </label>
                       <input
                         type="tel"
-                        required
-                        pattern="[0-9]{10}"
-                        title="Please enter a valid 10-digit mobile number"
                         value={customerPhone}
                         onChange={(e) => setCustomerPhone(e.target.value.replace(/\D/g, '').substring(0, 10))}
                         placeholder="e.g. 9876543210"
@@ -234,11 +229,11 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
                   </div>
                   <div className="flex justify-between">
                     <span className="text-[#2A211D]/60">Customer Name:</span>
-                    <span className="font-medium uppercase">{customerName}</span>
+                    <span className="font-medium uppercase">{customerName || 'Valued Customer'}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-[#2A211D]/60">Contact No:</span>
-                    <span className="font-medium">{customerPhone}</span>
+                    <span className="font-medium">{customerPhone || 'N/A'}</span>
                   </div>
                 </div>
 
