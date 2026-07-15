@@ -196,18 +196,7 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
                         className="w-full p-2 text-sm bg-[#FAF6F0] border border-[#D4AF37]/30 rounded focus:outline-none focus:border-[#5C1D24] font-sans"
                       />
                     </div>
-                    <div>
-                      <label className="block text-[10px] uppercase tracking-widest text-[#5C1D24] font-bold mb-1 font-sans">
-                        Delivery Address
-                      </label>
-                      <textarea
-                        value={address}
-                        onChange={(e) => setAddress(e.target.value)}
-                        placeholder="For delivery details"
-                        rows={2}
-                        className="w-full p-2 text-sm bg-[#FAF6F0] border border-[#D4AF37]/30 rounded focus:outline-none focus:border-[#5C1D24] font-sans resize-none"
-                      />
-                    </div>
+
                     <button
                       type="submit"
                       className="w-full py-3 bg-[#5C1D24] hover:bg-[#4A141A] text-[#FAF6F0] font-semibold text-xs tracking-widest uppercase rounded border border-[#D4AF37] transition-all duration-300 cursor-pointer shadow-lg mt-2 flex items-center justify-center gap-2 hover:scale-101"
